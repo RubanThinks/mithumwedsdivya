@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-burgundy: #641E32;
+  --color-burgundy-dark: #3F101E;
+  --color-burgundy-light: #8B2A47;
+  --color-gold: #C6A15B;
+  --color-gold-light: #E0C78F;
+  --color-gold-dark: #9E7D3B;
+  --color-ivory: #FFFDF9;
+  --color-ivory-dark: #F5EFEB;
+  --color-champagne: #EADBC8;
+  --color-champagne-dark: #D8C3AA;
+  --color-forest: #1A3026;
+  --color-forest-light: #264336;
+  --color-forest-dark: #102019;
+
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-cinzel: 'Cinzel', serif;
+  --font-great-vibes: 'Great Vibes', cursive;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-poppins: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-poppins);
+  background-color: #102019;
+  color: #FFFDF9;
+  overflow-x: hidden;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #102019;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C6A15B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E0C78F;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(198, 161, 91, 0.35);
+  color: #FFFDF9;
+}
+
+/* Smooth Lenis overrides */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Continuous Heart Rain Fall Animation - Never Stops on Scroll */
+@keyframes heartRainContinuous {
+  0% {
+    transform: translateY(-10vh) rotate(0deg) scale(0.85);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.85;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(115vh) rotate(45deg) scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* Diamond Border Shimmer & Glitter Animations */
+@keyframes diamondBorderShimmer {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes diamondGlitterTwinkle {
+  0%, 100% {
+    transform: scale(0.7) rotate(0deg);
+    opacity: 0.3;
+    filter: drop-shadow(0 0 2px #fff);
+  }
+  50% {
+    transform: scale(1.35) rotate(45deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 6px #ffffff) drop-shadow(0 0 12px #ffdf78);
+  }
+}
+
+.animate-diamond-shimmer {
+  animation: diamondBorderShimmer 7s linear infinite;
+}
+
+.animate-diamond-twinkle {
+  animation: diamondGlitterTwinkle 2.4s ease-in-out infinite;
+}
+
+/* Ornamental divider */
+.ornamental-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.ornamental-divider::before,
+.ornamental-divider::after {
+  content: '';
+  flex: 1;
+  max-width: 140px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C6A15B, transparent);
+}
