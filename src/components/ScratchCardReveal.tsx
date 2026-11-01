@@ -100,67 +100,115 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
     ctx.strokeRect(15, 15, width - 30, height - 30);
     ctx.restore();
 
-    // 4. PERFECT, SYMMETRICAL, ROMANTIC DECORATIVE WEDDING HEART
+    // 4. ROYAL DIAMOND GOLD HEART (Exact design from Hero Section between Bride & Groom names)
     ctx.save();
     const hx = width / 2;
-    const hy = height * 0.44;
-    const hs = Math.min(width, height) * 0.26; // Responsive heart scale
+    // Position heart cleanly in the upper central zone, with generous spacing from all text
+    const hy = height * 0.40;
+
+    // Controlled size so it never overpowers or touches any text
+    const heartWidth = Math.min(width * 0.18, height * 0.28, 76);
+    const heartHeight = heartWidth * (36 / 39); // exact SVG aspect ratio (36:39)
+    const sx = heartWidth / 39;
+    const sy = heartHeight / 36;
 
     ctx.translate(hx, hy);
-    ctx.beginPath();
-    ctx.moveTo(0, hs * 0.72);
-    // Left lobe smooth cubic curve
-    ctx.bezierCurveTo(-hs * 0.75, hs * 0.25, -hs * 0.95, -hs * 0.35, -hs * 0.45, -hs * 0.75);
-    ctx.bezierCurveTo(-hs * 0.15, -hs * 0.95, 0, -hs * 0.6, 0, -hs * 0.35);
-    // Right lobe smooth cubic curve
-    ctx.bezierCurveTo(0, -hs * 0.6, hs * 0.15, -hs * 0.95, hs * 0.45, -hs * 0.75);
-    ctx.bezierCurveTo(hs * 0.95, -hs * 0.35, hs * 0.75, hs * 0.25, 0, hs * 0.72);
-    ctx.closePath();
 
-    // Soft ruby-tinted interior with subtle golden highlight
-    ctx.fillStyle = 'rgba(100, 30, 50, 0.08)';
-    ctx.fill();
-    ctx.strokeStyle = 'rgba(100, 30, 50, 0.4)';
-    ctx.lineWidth = 1.8;
-    ctx.stroke();
-
-    // Inner fine heart line for luxury jewelry feel
-    ctx.beginPath();
-    const is = hs * 0.85;
-    ctx.moveTo(0, is * 0.72);
-    ctx.bezierCurveTo(-is * 0.75, is * 0.25, -is * 0.95, -is * 0.35, -is * 0.45, -is * 0.75);
-    ctx.bezierCurveTo(-is * 0.15, -is * 0.95, 0, -is * 0.6, 0, -is * 0.35);
-    ctx.bezierCurveTo(0, -is * 0.6, is * 0.15, -is * 0.95, is * 0.45, -is * 0.75);
-    ctx.bezierCurveTo(is * 0.95, -is * 0.35, is * 0.75, is * 0.25, 0, is * 0.72);
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.6)';
-    ctx.lineWidth = 1;
-    ctx.stroke();
+    // --- Diamond Sparkle Stars around the heart (Matching Hero Section DiamondGoldHeart) ---
+    ctx.save();
+    ctx.font = `${Math.max(10, heartWidth * 0.22)}px serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillStyle = '#D4AF37';
+    ctx.shadowColor = 'rgba(255, 255, 255, 0.9)';
+    ctx.shadowBlur = 6;
+    // Top-right sparkle
+    ctx.fillText('✦', heartWidth * 0.58, -heartHeight * 0.45);
+    // Bottom-left sparkle
+    ctx.fillStyle = '#FFF8DC';
+    ctx.font = `${Math.max(9, heartWidth * 0.18)}px serif`;
+    ctx.fillText('✧', -heartWidth * 0.58, heartHeight * 0.35);
+    // Left-middle sparkle
+    ctx.fillStyle = '#F3E5AB';
+    ctx.fillText('✦', -heartWidth * 0.65, -heartHeight * 0.1);
     ctx.restore();
 
-    // 5. Foil Typography: Scaled dynamically to fit mobile & desktop without overflow
+    // --- Draw Exact SVG Royal Heart from DiamondGoldHeart ---
     ctx.save();
-    const leadSize = Math.max(9, Math.min(12, width * 0.024));
+    ctx.scale(sx, sy);
+    ctx.translate(-24, -20.5); // Center the 48x44 SVG path
+
+    // 1. Inner Heart Velvet Ruby Glow Fill
+    const heartGlow = ctx.createRadialGradient(24, 17.6, 2, 24, 17.6, 24);
+    heartGlow.addColorStop(0, 'rgba(217, 83, 111, 0.92)');
+    heartGlow.addColorStop(0.7, 'rgba(138, 24, 52, 0.95)');
+    heartGlow.addColorStop(1, 'rgba(74, 12, 28, 0.98)');
+
+    ctx.beginPath();
+    ctx.moveTo(24, 38.5);
+    ctx.bezierCurveTo(24, 38.5, 4.5, 26.5, 4.5, 14);
+    ctx.bezierCurveTo(4.5, 7.5, 9.8, 2.5, 16, 2.5);
+    ctx.bezierCurveTo(20, 2.5, 22.8, 4.8, 24, 6.8);
+    ctx.bezierCurveTo(25.2, 4.8, 28, 2.5, 32, 2.5);
+    ctx.bezierCurveTo(38.2, 2.5, 43.5, 7.5, 43.5, 14);
+    ctx.bezierCurveTo(43.5, 26.5, 24, 38.5, 24, 38.5);
+    ctx.closePath();
+
+    ctx.fillStyle = heartGlow;
+    ctx.shadowColor = 'rgba(212, 175, 55, 0.45)';
+    ctx.shadowBlur = 8;
+    ctx.fill();
+
+    // 2. Precious Gold Filigree Outline
+    const goldStroke = ctx.createLinearGradient(4.5, 2.5, 43.5, 38.5);
+    goldStroke.addColorStop(0, '#C6A15B');
+    goldStroke.addColorStop(0.35, '#FFF8DC');
+    goldStroke.addColorStop(0.65, '#D4AF37');
+    goldStroke.addColorStop(1, '#996515');
+
+    ctx.strokeStyle = goldStroke;
+    ctx.lineWidth = 2.8;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.stroke();
+
+    // 3. Diamond Facet Highlight curve (reflecting light)
+    ctx.beginPath();
+    ctx.moveTo(14, 8);
+    ctx.bezierCurveTo(10, 11, 9, 16, 10, 20);
+    ctx.strokeStyle = 'rgba(255, 253, 249, 0.85)';
+    ctx.lineWidth = 2;
+    ctx.lineCap = 'round';
+    ctx.stroke();
+
+    ctx.restore(); // restore transform from scale & translate
+    ctx.restore(); // restore save for heart
+
+    // 5. Foil Typography: Carefully positioned with dedicated vertical spacing so it NEVER overlaps
+    ctx.save();
+    // Top Surprise Lead-in
+    const leadSize = Math.max(10, Math.min(13, width * 0.026));
     ctx.font = `bold ${leadSize}px Cinzel, serif`;
     ctx.fillStyle = '#641E32';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.shadowColor = 'rgba(255, 255, 255, 0.85)';
+    ctx.shadowColor = 'rgba(255, 255, 255, 0.9)';
     ctx.shadowBlur = 4;
-    ctx.fillText('✦  A  L I T T L E  S U R P R I S E !  ✦', width / 2, height * 0.22);
+    ctx.fillText('✦  A  L I T T L E  S U R P R I S E !  ✦', width / 2, height * 0.16);
 
-    // Primary Instruction
-    const instructSize = Math.max(16, Math.min(24, width * 0.046));
+    // Primary Instruction (Cleanly below the heart with ample clearance)
+    const instructSize = Math.max(16, Math.min(23, width * 0.044));
     ctx.font = `italic 600 ${instructSize}px "Cormorant Garamond", Georgia, serif`;
     ctx.fillStyle = '#3E0E1B';
     ctx.shadowBlur = 6;
-    ctx.fillText('Scratch to reveal our wedding date  ❤', width / 2, height * 0.64);
+    ctx.fillText('Scratch to reveal our wedding date', width / 2, height * 0.70);
 
     // Subtle helper text at bottom
-    const subSize = Math.max(8, Math.min(10, width * 0.02));
+    const subSize = Math.max(8.5, Math.min(11, width * 0.021));
     ctx.font = `bold ${subSize}px Cinzel, serif`;
     ctx.fillStyle = '#7A4B10';
     ctx.shadowBlur = 2;
-    ctx.fillText('✨ SWIPE HERE WITH FINGER OR MOUSE ✨', width / 2, height * 0.84);
+    ctx.fillText('✨ SWIPE HERE WITH FINGER OR MOUSE ✨', width / 2, height * 0.86);
     ctx.restore();
   }, []);
 
@@ -298,11 +346,11 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
   };
 
   return (
-    <div className="relative w-full max-w-xl mx-auto flex flex-col items-center select-none px-2 sm:px-0">
-      {/* Scratch Card Frame - Styled like a Luxury Indian Wedding Card */}
+    <div className="relative w-full max-w-xl sm:max-w-2xl mx-auto flex flex-col items-center select-none px-2 sm:px-0">
+      {/* Scratch Card Frame - Styled like a Luxury Indian Wedding Card with comfortable breathing room */}
       <div
         ref={containerRef}
-        className="relative w-full aspect-[16/11] sm:aspect-[16/9] min-h-[220px] sm:min-h-[260px] rounded-[24px] overflow-hidden border-2 border-[#C6A15B] shadow-[0_16px_45px_rgba(70,30,10,0.18),0_0_20px_rgba(198,161,91,0.22)] transition-all duration-500"
+        className="relative w-full h-[270px] sm:h-[310px] md:h-[330px] rounded-[24px] overflow-hidden border-2 border-[#C6A15B] shadow-[0_20px_50px_rgba(70,30,10,0.18),0_0_25px_rgba(198,161,91,0.22)] transition-all duration-500"
       >
         {/* ========================================================
             1. UNDERNEATH REVEALED CONTENT: WEDDING DATE & TIME ONLY
