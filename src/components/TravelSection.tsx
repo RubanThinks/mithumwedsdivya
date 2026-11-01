@@ -148,11 +148,49 @@ const TravelSection: React.FC = () => {
           {/* Card 1 – Railway Connectivity Card */}
           <div
             ref={railwayCardRef}
-            className="travel-info-card rounded-2xl border border-[#C6A15B]/50 bg-[#FFFDF9]/95 p-7 sm:p-9 text-center shadow-[0_14px_36px_rgba(70,30,10,0.14)] flex flex-col items-center justify-between hover:border-[#8A6517] hover:shadow-[0_18px_45px_rgba(138,101,23,0.22)] transition-all duration-300"
+            className="travel-info-card relative overflow-hidden rounded-[24px] border-2 border-[#C6A15B]/75 bg-gradient-to-br from-[#FFFDF9] via-[#FAF4EB] to-[#F5EAD8] p-7 sm:p-9 text-center shadow-[0_20px_50px_rgba(70,30,10,0.16),0_0_25px_rgba(198,161,91,0.14),inset_0_1px_2px_rgba(255,255,255,0.95)] flex flex-col items-center justify-between hover:border-[#8A6517] hover:shadow-[0_26px_60px_rgba(138,101,23,0.26)] transition-all duration-300 group"
           >
-            <div className="w-full">
+            {/* Inner Gold Inset Frame */}
+            <div className="absolute inset-2.5 sm:inset-3 border border-[#C6A15B]/40 rounded-[18px] pointer-events-none" />
+
+            {/* Four Corner Flourishes */}
+            <div className="absolute top-2.5 left-2.5 w-5 h-5 pointer-events-none text-[#C6A15B]/80">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 16 L 2 5 C 2 3.3 3.3 2 5 2 L 16 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="6" cy="6" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute top-2.5 right-2.5 w-5 h-5 pointer-events-none text-[#C6A15B]/80 rotate-90">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 16 L 2 5 C 2 3.3 3.3 2 5 2 L 16 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="6" cy="6" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute bottom-2.5 left-2.5 w-5 h-5 pointer-events-none text-[#C6A15B]/80 -rotate-90">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 16 L 2 5 C 2 3.3 3.3 2 5 2 L 16 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="6" cy="6" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute bottom-2.5 right-2.5 w-5 h-5 pointer-events-none text-[#C6A15B]/80 rotate-180">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 16 L 2 5 C 2 3.3 3.3 2 5 2 L 16 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="6" cy="6" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+
+            <div className="relative z-10 w-full">
+              {/* Auspicious Top Motif */}
+              <div className="flex items-center justify-center gap-1.5 text-[#C6A15B] text-[10px] mb-2 font-serif">
+                <span>✦</span>
+                <span className="text-xs">❧</span>
+                <span>✤</span>
+                <span className="text-xs">❧</span>
+                <span>✦</span>
+              </div>
+
               {/* Icon */}
-              <div className="w-13 h-13 rounded-full bg-[#4A0E1F]/10 border border-[#C6A15B]/60 flex items-center justify-center mx-auto mb-4 text-[#4A0E1F] shadow-sm">
+              <div className="w-13 h-13 rounded-full bg-gradient-to-br from-[#4A0E1F]/15 to-[#8A6517]/20 border border-[#C6A15B]/70 flex items-center justify-center mx-auto mb-3 text-[#4A0E1F] shadow-sm group-hover:scale-105 transition-transform duration-300">
                 <TrainFront className="w-6 h-6 text-[#8A6517]" />
               </div>
 
@@ -162,21 +200,21 @@ const TravelSection: React.FC = () => {
               </span>
 
               {/* Station Name */}
-              <h3 className="font-cormorant text-2xl sm:text-3xl text-[#4A0E1F] font-bold leading-tight mb-2">
+              <h3 className="font-cormorant text-2xl sm:text-3xl text-[#4A0E1F] font-black leading-tight mb-2 drop-shadow-sm">
                 Palakollu Railway Station (PKO)
               </h3>
 
               {/* Distance description */}
-              <p className="font-poppins text-sm text-[#2E1810] font-medium leading-relaxed mb-4">
+              <p className="font-poppins text-sm text-[#2E1810] font-semibold leading-relaxed mb-4">
                 Located right within town (~2 km from wedding venue).
               </p>
 
               {/* Alternative Railway Connectivity */}
-              <div className="pt-3.5 border-t border-[#C6A15B]/30 text-center">
-                <span className="font-cinzel text-[11px] uppercase tracking-wider text-[#6E5014] font-bold block mb-1">
+              <div className="pt-3.5 border-t border-[#C6A15B]/35 text-center">
+                <span className="font-cinzel text-[11px] uppercase tracking-wider text-[#6E5014] font-black block mb-1">
                   Alternative Railway Connectivity
                 </span>
-                <p className="font-poppins text-xs text-[#5C4015] font-semibold">
+                <p className="font-poppins text-xs text-[#5C4015] font-bold">
                   Bhimavaram Junction – Approximately 22 km (Express trains).
                 </p>
               </div>
@@ -187,7 +225,7 @@ const TravelSection: React.FC = () => {
               href="https://www.google.com/maps/search/Palakollu+Railway+Station"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#641E32] hover:bg-[#8A6517] text-[#FFFDF9] border border-[#C6A15B]/70 rounded-full font-cinzel text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+              className="relative z-10 mt-6 w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-[#641E32] to-[#7A152E] hover:from-[#8A6517] hover:to-[#A3781D] text-[#FFFDF9] border border-[#C6A15B]/70 rounded-full font-cinzel text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
             >
               <Navigation className="w-4 h-4 text-[#FFDF78]" />
               <span>STATION LOCATION ON MAP</span>
@@ -198,11 +236,49 @@ const TravelSection: React.FC = () => {
           {/* Card 2 – Airport Connectivity Card */}
           <div
             ref={airportCardRef}
-            className="travel-info-card rounded-2xl border border-[#C6A15B]/50 bg-[#FFFDF9]/95 p-7 sm:p-9 text-center shadow-[0_14px_36px_rgba(70,30,10,0.14)] flex flex-col items-center justify-between hover:border-[#8A6517] hover:shadow-[0_18px_45px_rgba(138,101,23,0.22)] transition-all duration-300"
+            className="travel-info-card relative overflow-hidden rounded-[24px] border-2 border-[#C6A15B]/75 bg-gradient-to-br from-[#FFFDF9] via-[#FAF4EB] to-[#F5EAD8] p-7 sm:p-9 text-center shadow-[0_20px_50px_rgba(70,30,10,0.16),0_0_25px_rgba(198,161,91,0.14),inset_0_1px_2px_rgba(255,255,255,0.95)] flex flex-col items-center justify-between hover:border-[#8A6517] hover:shadow-[0_26px_60px_rgba(138,101,23,0.26)] transition-all duration-300 group"
           >
-            <div className="w-full">
+            {/* Inner Gold Inset Frame */}
+            <div className="absolute inset-2.5 sm:inset-3 border border-[#C6A15B]/40 rounded-[18px] pointer-events-none" />
+
+            {/* Four Corner Flourishes */}
+            <div className="absolute top-2.5 left-2.5 w-5 h-5 pointer-events-none text-[#C6A15B]/80">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 16 L 2 5 C 2 3.3 3.3 2 5 2 L 16 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="6" cy="6" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute top-2.5 right-2.5 w-5 h-5 pointer-events-none text-[#C6A15B]/80 rotate-90">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 16 L 2 5 C 2 3.3 3.3 2 5 2 L 16 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="6" cy="6" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute bottom-2.5 left-2.5 w-5 h-5 pointer-events-none text-[#C6A15B]/80 -rotate-90">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 16 L 2 5 C 2 3.3 3.3 2 5 2 L 16 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="6" cy="6" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute bottom-2.5 right-2.5 w-5 h-5 pointer-events-none text-[#C6A15B]/80 rotate-180">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 16 L 2 5 C 2 3.3 3.3 2 5 2 L 16 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="6" cy="6" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+
+            <div className="relative z-10 w-full">
+              {/* Auspicious Top Motif */}
+              <div className="flex items-center justify-center gap-1.5 text-[#C6A15B] text-[10px] mb-2 font-serif">
+                <span>✦</span>
+                <span className="text-xs">❧</span>
+                <span>✤</span>
+                <span className="text-xs">❧</span>
+                <span>✦</span>
+              </div>
+
               {/* Icon */}
-              <div className="w-13 h-13 rounded-full bg-[#4A0E1F]/10 border border-[#C6A15B]/60 flex items-center justify-center mx-auto mb-4 text-[#4A0E1F] shadow-sm">
+              <div className="w-13 h-13 rounded-full bg-gradient-to-br from-[#4A0E1F]/15 to-[#8A6517]/20 border border-[#C6A15B]/70 flex items-center justify-center mx-auto mb-3 text-[#4A0E1F] shadow-sm group-hover:scale-105 transition-transform duration-300">
                 <Plane className="w-6 h-6 text-[#8A6517]" />
               </div>
 
@@ -212,21 +288,21 @@ const TravelSection: React.FC = () => {
               </span>
 
               {/* Airport Name */}
-              <h3 className="font-cormorant text-2xl sm:text-3xl text-[#4A0E1F] font-bold leading-tight mb-2">
+              <h3 className="font-cormorant text-2xl sm:text-3xl text-[#4A0E1F] font-black leading-tight mb-2 drop-shadow-sm">
                 Rajahmundry Airport (RJA)
               </h3>
 
               {/* Distance description */}
-              <p className="font-poppins text-sm text-[#2E1810] font-medium leading-relaxed mb-4">
+              <p className="font-poppins text-sm text-[#2E1810] font-semibold leading-relaxed mb-4">
                 Madhurapudi, Rajahmundry (~60–65 km from venue).
               </p>
 
               {/* Alternative Airport */}
-              <div className="pt-3.5 border-t border-[#C6A15B]/30 text-center">
-                <span className="font-cinzel text-[11px] uppercase tracking-wider text-[#6E5014] font-bold block mb-1">
+              <div className="pt-3.5 border-t border-[#C6A15B]/35 text-center">
+                <span className="font-cinzel text-[11px] uppercase tracking-wider text-[#6E5014] font-black block mb-1">
                   Alternative Airport
                 </span>
-                <p className="font-poppins text-xs text-[#5C4015] font-semibold">
+                <p className="font-poppins text-xs text-[#5C4015] font-bold">
                   Vijayawada International Airport (VGA) – Approximately 115 km.
                 </p>
               </div>
@@ -237,7 +313,7 @@ const TravelSection: React.FC = () => {
               href="https://www.google.com/maps/search/Rajahmundry+Airport"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#641E32] hover:bg-[#8A6517] text-[#FFFDF9] border border-[#C6A15B]/70 rounded-full font-cinzel text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+              className="relative z-10 mt-6 w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-[#641E32] to-[#7A152E] hover:from-[#8A6517] hover:to-[#A3781D] text-[#FFFDF9] border border-[#C6A15B]/70 rounded-full font-cinzel text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
             >
               <Navigation className="w-4 h-4 text-[#FFDF78]" />
               <span>AIRPORT LOCATION ON MAP</span>

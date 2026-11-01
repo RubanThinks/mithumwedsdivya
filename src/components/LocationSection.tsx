@@ -166,71 +166,177 @@ const LocationSection = () => {
         </div>
 
         {/* ========================================================
-            3. VENUE INFORMATION CARD (Warm Ivory, Subtle Gold Border, Minimal Shadow)
+            3. VENUE INFORMATION CARD (Royal Wedding Card Frame)
             ======================================================== */}
         <div
           ref={venueCardRef}
-          className="max-w-2xl mx-auto mb-10 rounded-[24px] bg-[#FFFDF9] border border-[#C6A15B]/50 p-7 sm:p-9 shadow-[0_15px_40px_rgba(70,30,10,0.12)] text-center relative"
+          className="max-w-2xl mx-auto mb-10 rounded-[24px] bg-gradient-to-br from-[#FFFDF9] via-[#FAF4EB] to-[#F5EAD8] border-2 border-[#C6A15B]/75 p-7 sm:p-9 shadow-[0_20px_50px_rgba(70,30,10,0.16),0_0_25px_rgba(198,161,91,0.14),inset_0_1px_2px_rgba(255,255,255,0.95)] text-center relative overflow-hidden group"
           style={{ opacity: 1 }}
         >
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#4A0E1F]/10 text-[#4A0E1F] mb-3">
-            <MapPin className="w-6 h-6 text-[#8A6517]" />
+          {/* Inner Decorative Inset Gold Border */}
+          <div className="absolute inset-2.5 sm:inset-3 border border-[#C6A15B]/40 rounded-[18px] pointer-events-none" />
+
+          {/* Four Ornate Corner Flourishes */}
+          <div className="absolute top-2.5 left-2.5 w-5 h-5 pointer-events-none text-[#C6A15B]/80">
+            <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+              <path d="M 2 16 L 2 5 C 2 3.3 3.3 2 5 2 L 16 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+              <circle cx="6" cy="6" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <div className="absolute top-2.5 right-2.5 w-5 h-5 pointer-events-none text-[#C6A15B]/80 rotate-90">
+            <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+              <path d="M 2 16 L 2 5 C 2 3.3 3.3 2 5 2 L 16 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+              <circle cx="6" cy="6" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <div className="absolute bottom-2.5 left-2.5 w-5 h-5 pointer-events-none text-[#C6A15B]/80 -rotate-90">
+            <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+              <path d="M 2 16 L 2 5 C 2 3.3 3.3 2 5 2 L 16 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+              <circle cx="6" cy="6" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <div className="absolute bottom-2.5 right-2.5 w-5 h-5 pointer-events-none text-[#C6A15B]/80 rotate-180">
+            <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+              <path d="M 2 16 L 2 5 C 2 3.3 3.3 2 5 2 L 16 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+              <circle cx="6" cy="6" r="1.5" fill="currentColor" />
+            </svg>
           </div>
 
-          <h3 className="font-cinzel text-2xl sm:text-3xl md:text-4xl text-[#4A0E1F] font-black tracking-wide mb-2">
-            Sri Kshatriya Kalyana Mandapam
-          </h3>
+          <div className="relative z-10">
+            {/* Auspicious Top Motif */}
+            <div className="flex items-center justify-center gap-1.5 text-[#C6A15B] text-[10px] mb-2 font-serif">
+              <span>✦</span>
+              <span className="text-xs">❧</span>
+              <span>✤</span>
+              <span className="text-xs">❧</span>
+              <span>✦</span>
+            </div>
 
-          <p className="font-poppins text-[#2E1810] text-sm sm:text-base font-semibold leading-relaxed">
-            Palakollu, West Godavari<br />
-            Andhra Pradesh, India
-          </p>
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-[#4A0E1F]/15 to-[#8A6517]/20 border border-[#C6A15B]/70 text-[#4A0E1F] mb-3 shadow-sm group-hover:scale-105 transition-transform duration-300">
+              <MapPin className="w-6 h-6 text-[#8A6517]" />
+            </div>
 
-          <div className="w-16 h-px bg-[#C6A15B]/40 mx-auto my-4" />
+            <h3 className="font-cinzel text-2xl sm:text-3xl md:text-4xl text-[#4A0E1F] font-black tracking-wide mb-2 drop-shadow-sm">
+              Sri Kshatriya Kalyana Mandapam
+            </h3>
 
-          <p className="font-cormorant italic text-[#6E5014] text-base sm:text-lg font-semibold max-w-lg mx-auto">
-            We warmly welcome you to join us and celebrate this beautiful occasion with our families.
-          </p>
+            <p className="font-poppins text-[#2E1810] text-sm sm:text-base font-bold leading-relaxed">
+              Palakollu, West Godavari<br />
+              Andhra Pradesh, India
+            </p>
+
+            <div className="flex items-center justify-center gap-2 my-4">
+              <span className="w-12 h-px bg-[#C6A15B]/40" />
+              <span className="text-[#8A6517] text-xs">◈</span>
+              <span className="w-12 h-px bg-[#C6A15B]/40" />
+            </div>
+
+            <p className="font-cormorant italic text-[#6E5014] text-base sm:text-lg font-bold max-w-lg mx-auto">
+              We warmly welcome you to join us and celebrate this beautiful occasion with our families.
+            </p>
+          </div>
         </div>
 
         {/* ========================================================
-            4. EVENT DETAILS (Compact Two Information Components)
+            4. EVENT DETAILS (Royal Wedding Celebration Cards)
             ======================================================== */}
         <div
           ref={eventDetailsRef}
           className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10"
         >
           {/* Ceremony Card */}
-          <div className="event-detail-item rounded-[20px] bg-[#FFFDF9] border border-[#C6A15B]/45 p-6 shadow-[0_12px_32px_rgba(70,30,10,0.10)] flex flex-col items-center text-center">
-            <div className="w-10 h-10 rounded-full bg-[#4A0E1F]/10 flex items-center justify-center mb-3">
-              <Calendar className="w-5 h-5 text-[#8A6517]" />
+          <div className="event-detail-item relative overflow-hidden rounded-[20px] bg-gradient-to-br from-[#FFFDF9] via-[#FAF4EB] to-[#F5EAD8] border-2 border-[#C6A15B]/75 p-6 shadow-[0_16px_40px_rgba(70,30,10,0.14),0_0_20px_rgba(198,161,91,0.12),inset_0_1px_2px_rgba(255,255,255,0.9)] flex flex-col items-center text-center group">
+            {/* Inner Gold Frame */}
+            <div className="absolute inset-2 border border-[#C6A15B]/40 rounded-[14px] pointer-events-none" />
+
+            {/* Corner Flourishes */}
+            <div className="absolute top-2 left-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
             </div>
-            <h4 className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#8A6517] font-extrabold mb-1">
-              Wedding Ceremony
-            </h4>
-            <p className="font-playfair text-xl sm:text-2xl text-[#4A0E1F] font-black mb-1">
-              12 November 2022
-            </p>
-            <div className="inline-flex items-center gap-1.5 text-xs text-[#2E1810] font-poppins font-bold bg-[#F5E6CC]/60 px-3 py-1 rounded-full mt-1">
-              <Clock className="w-3.5 h-3.5 text-[#8A6517]" />
-              <span>Muhurtham: 6:38 PM</span>
+            <div className="absolute top-2 right-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80 rotate-90">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute bottom-2 left-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80 -rotate-90">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute bottom-2 right-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80 rotate-180">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+
+            <div className="relative z-10 w-full flex flex-col items-center">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#4A0E1F]/15 to-[#8A6517]/20 border border-[#C6A15B]/60 flex items-center justify-center mb-3 shadow-sm group-hover:scale-105 transition-transform duration-300">
+                <Calendar className="w-5 h-5 text-[#8A6517]" />
+              </div>
+              <h4 className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#8A6517] font-black mb-1">
+                Wedding Ceremony
+              </h4>
+              <p className="font-playfair text-xl sm:text-2xl text-[#4A0E1F] font-black mb-1 drop-shadow-sm">
+                12 November 2022
+              </p>
+              <div className="inline-flex items-center gap-1.5 text-xs text-[#2E1810] font-poppins font-bold bg-[#4A0E1F]/10 border border-[#C6A15B]/35 px-3 py-1 rounded-full mt-1">
+                <Clock className="w-3.5 h-3.5 text-[#8A6517]" />
+                <span>Muhurtham: 6:38 PM</span>
+              </div>
             </div>
           </div>
 
           {/* Dinner Card */}
-          <div className="event-detail-item rounded-[20px] bg-[#FFFDF9] border border-[#C6A15B]/45 p-6 shadow-[0_12px_32px_rgba(70,30,10,0.10)] flex flex-col items-center text-center">
-            <div className="w-10 h-10 rounded-full bg-[#4A0E1F]/10 flex items-center justify-center mb-3">
-              <Utensils className="w-5 h-5 text-[#8A6517]" />
+          <div className="event-detail-item relative overflow-hidden rounded-[20px] bg-gradient-to-br from-[#FFFDF9] via-[#FAF4EB] to-[#F5EAD8] border-2 border-[#C6A15B]/75 p-6 shadow-[0_16px_40px_rgba(70,30,10,0.14),0_0_20px_rgba(198,161,91,0.12),inset_0_1px_2px_rgba(255,255,255,0.9)] flex flex-col items-center text-center group">
+            {/* Inner Gold Frame */}
+            <div className="absolute inset-2 border border-[#C6A15B]/40 rounded-[14px] pointer-events-none" />
+
+            {/* Corner Flourishes */}
+            <div className="absolute top-2 left-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
             </div>
-            <h4 className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#8A6517] font-extrabold mb-1">
-              Dinner Celebration
-            </h4>
-            <p className="font-playfair text-xl sm:text-2xl text-[#4A0E1F] font-black mb-1">
-              12 November 2022
-            </p>
-            <div className="inline-flex items-center gap-1.5 text-xs text-[#2E1810] font-poppins font-bold bg-[#F5E6CC]/60 px-3 py-1 rounded-full mt-1">
-              <Clock className="w-3.5 h-3.5 text-[#8A6517]" />
-              <span>Time: 7:00 PM onwards</span>
+            <div className="absolute top-2 right-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80 rotate-90">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute bottom-2 left-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80 -rotate-90">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute bottom-2 right-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80 rotate-180">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+
+            <div className="relative z-10 w-full flex flex-col items-center">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#4A0E1F]/15 to-[#8A6517]/20 border border-[#C6A15B]/60 flex items-center justify-center mb-3 shadow-sm group-hover:scale-105 transition-transform duration-300">
+                <Utensils className="w-5 h-5 text-[#8A6517]" />
+              </div>
+              <h4 className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#8A6517] font-black mb-1">
+                Dinner Celebration
+              </h4>
+              <p className="font-playfair text-xl sm:text-2xl text-[#4A0E1F] font-black mb-1 drop-shadow-sm">
+                12 November 2022
+              </p>
+              <div className="inline-flex items-center gap-1.5 text-xs text-[#2E1810] font-poppins font-bold bg-[#4A0E1F]/10 border border-[#C6A15B]/35 px-3 py-1 rounded-full mt-1">
+                <Clock className="w-3.5 h-3.5 text-[#8A6517]" />
+                <span>Time: 7:00 PM onwards</span>
+              </div>
             </div>
           </div>
         </div>

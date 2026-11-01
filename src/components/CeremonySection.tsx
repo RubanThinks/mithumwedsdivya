@@ -142,9 +142,47 @@ const CeremonySection: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-3xl mx-auto"
         >
           {/* Card 1 – Wedding Date */}
-          <div className="wedding-info-card rounded-2xl border border-[#C6A15B]/50 bg-[#FFFDF9]/95 p-7 sm:p-8 text-center shadow-[0_12px_32px_rgba(70,30,10,0.12)] flex flex-col items-center justify-between hover:border-[#8A6517] hover:shadow-[0_16px_40px_rgba(138,101,23,0.2)] transition-all duration-300">
-            <div>
-              <div className="w-12 h-12 rounded-full bg-[#4A0E1F]/10 border border-[#C6A15B]/60 flex items-center justify-center mx-auto mb-3.5 text-[#4A0E1F] shadow-sm">
+          <div className="wedding-info-card relative overflow-hidden rounded-2xl border-2 border-[#C6A15B]/75 bg-gradient-to-br from-[#FFFDF9] via-[#FAF4EB] to-[#F5EAD8] p-7 sm:p-8 text-center shadow-[0_16px_40px_rgba(70,30,10,0.15),0_0_20px_rgba(198,161,91,0.12),inset_0_1px_2px_rgba(255,255,255,0.9)] flex flex-col items-center justify-between hover:border-[#8A6517] hover:shadow-[0_20px_50px_rgba(138,101,23,0.25)] transition-all duration-300 group">
+            {/* Inner Gold Inset Frame */}
+            <div className="absolute inset-2 sm:inset-2.5 border border-[#C6A15B]/40 rounded-[12px] pointer-events-none" />
+
+            {/* Corner Flourishes */}
+            <div className="absolute top-2 left-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute top-2 right-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80 rotate-90">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute bottom-2 left-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80 -rotate-90">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute bottom-2 right-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80 rotate-180">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+
+            <div className="relative z-10 w-full">
+              {/* Auspicious Top Motif */}
+              <div className="flex items-center justify-center gap-1.5 text-[#C6A15B] text-[10px] mb-2 font-serif">
+                <span>✦</span>
+                <span className="text-xs">❧</span>
+                <span>✤</span>
+                <span className="text-xs">❧</span>
+                <span>✦</span>
+              </div>
+
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4A0E1F]/15 to-[#8A6517]/20 border border-[#C6A15B]/70 flex items-center justify-center mx-auto mb-3 text-[#4A0E1F] shadow-[0_2px_8px_rgba(74,14,31,0.15)] group-hover:scale-105 transition-transform duration-300">
                 <Calendar className="w-5 h-5 text-[#8A6517]" />
               </div>
 
@@ -152,22 +190,60 @@ const CeremonySection: React.FC = () => {
                 WEDDING DATE
               </span>
 
-              <h3 className="font-cinzel text-2xl sm:text-3xl text-[#4A0E1F] font-bold tracking-wide my-1">
+              <h3 className="font-cinzel text-2xl sm:text-3xl text-[#4A0E1F] font-black tracking-wide my-1 drop-shadow-sm">
                 12 November 2022
               </h3>
             </div>
 
-            <div className="pt-3 border-t border-[#C6A15B]/25 w-full mt-3">
-              <p className="font-poppins text-sm text-[#5C4015] font-semibold tracking-wider uppercase">
+            <div className="relative z-10 pt-3 border-t border-[#C6A15B]/35 w-full mt-3">
+              <p className="font-poppins text-sm text-[#5C4015] font-bold tracking-wider uppercase">
                 Saturday
               </p>
             </div>
           </div>
 
           {/* Card 2 – Wedding Time */}
-          <div className="wedding-info-card rounded-2xl border border-[#C6A15B]/50 bg-[#FFFDF9]/95 p-7 sm:p-8 text-center shadow-[0_12px_32px_rgba(70,30,10,0.12)] flex flex-col items-center justify-between hover:border-[#8A6517] hover:shadow-[0_16px_40px_rgba(138,101,23,0.2)] transition-all duration-300">
-            <div>
-              <div className="w-12 h-12 rounded-full bg-[#4A0E1F]/10 border border-[#C6A15B]/60 flex items-center justify-center mx-auto mb-3.5 text-[#4A0E1F] shadow-sm">
+          <div className="wedding-info-card relative overflow-hidden rounded-2xl border-2 border-[#C6A15B]/75 bg-gradient-to-br from-[#FFFDF9] via-[#FAF4EB] to-[#F5EAD8] p-7 sm:p-8 text-center shadow-[0_16px_40px_rgba(70,30,10,0.15),0_0_20px_rgba(198,161,91,0.12),inset_0_1px_2px_rgba(255,255,255,0.9)] flex flex-col items-center justify-between hover:border-[#8A6517] hover:shadow-[0_20px_50px_rgba(138,101,23,0.25)] transition-all duration-300 group">
+            {/* Inner Gold Inset Frame */}
+            <div className="absolute inset-2 sm:inset-2.5 border border-[#C6A15B]/40 rounded-[12px] pointer-events-none" />
+
+            {/* Corner Flourishes */}
+            <div className="absolute top-2 left-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute top-2 right-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80 rotate-90">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute bottom-2 left-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80 -rotate-90">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="absolute bottom-2 right-2 w-4 h-4 pointer-events-none text-[#C6A15B]/80 rotate-180">
+              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+
+            <div className="relative z-10 w-full">
+              {/* Auspicious Top Motif */}
+              <div className="flex items-center justify-center gap-1.5 text-[#C6A15B] text-[10px] mb-2 font-serif">
+                <span>✦</span>
+                <span className="text-xs">❧</span>
+                <span>✤</span>
+                <span className="text-xs">❧</span>
+                <span>✦</span>
+              </div>
+
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4A0E1F]/15 to-[#8A6517]/20 border border-[#C6A15B]/70 flex items-center justify-center mx-auto mb-3 text-[#4A0E1F] shadow-[0_2px_8px_rgba(74,14,31,0.15)] group-hover:scale-105 transition-transform duration-300">
                 <Clock className="w-5 h-5 text-[#8A6517]" />
               </div>
 
@@ -175,13 +251,13 @@ const CeremonySection: React.FC = () => {
                 MUHURTHAM
               </span>
 
-              <h3 className="font-cinzel text-2xl sm:text-3xl text-[#4A0E1F] font-bold tracking-wide my-1">
+              <h3 className="font-cinzel text-2xl sm:text-3xl text-[#4A0E1F] font-black tracking-wide my-1 drop-shadow-sm">
                 6:38 PM
               </h3>
             </div>
 
-            <div className="pt-3 border-t border-[#C6A15B]/25 w-full mt-3">
-              <p className="font-cormorant italic text-base text-[#5C4015] font-bold">
+            <div className="relative z-10 pt-3 border-t border-[#C6A15B]/35 w-full mt-3">
+              <p className="font-cormorant italic text-base text-[#5C4015] font-extrabold">
                 The auspicious wedding moment.
               </p>
             </div>

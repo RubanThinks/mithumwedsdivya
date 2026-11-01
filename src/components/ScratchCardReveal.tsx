@@ -43,7 +43,7 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
     }, 220);
   }, []);
 
-  // Initialize Canvas Foil: Premium Champagne-Gold Appearance with subtle decorative heart
+  // Initialize Canvas Foil: Premium Champagne-Gold Appearance with a Mathematically Perfect Heart
   const initCanvas = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -89,59 +89,78 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
       ctx.restore();
     }
 
-    // 3. Delicate Outer Border Inset on Foil
+    // 3. Delicate Double Gold & White Foil Inset Border
     ctx.save();
-    ctx.strokeStyle = 'rgba(100, 30, 50, 0.25)';
+    ctx.strokeStyle = 'rgba(100, 30, 50, 0.28)';
     ctx.lineWidth = 1.5;
-    ctx.strokeRect(14, 14, width - 28, height - 28);
+    ctx.strokeRect(12, 12, width - 24, height - 24);
 
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)';
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.75)';
     ctx.lineWidth = 1;
-    ctx.strokeRect(17, 17, width - 34, height - 34);
+    ctx.strokeRect(15, 15, width - 30, height - 30);
     ctx.restore();
 
-    // 4. Subtle Decorative Heart in Center (Stroke Outline)
+    // 4. PERFECT, SYMMETRICAL, ROMANTIC DECORATIVE WEDDING HEART
     ctx.save();
     const hx = width / 2;
     const hy = height * 0.44;
-    const hs = Math.min(width, height) * 0.22;
+    const hs = Math.min(width, height) * 0.26; // Responsive heart scale
 
     ctx.translate(hx, hy);
     ctx.beginPath();
-    ctx.moveTo(0, hs * 0.6);
-    ctx.bezierCurveTo(-hs * 0.7, 0, -hs * 0.8, -hs * 0.6, 0, -hs * 0.2);
-    ctx.bezierCurveTo(hs * 0.8, -hs * 0.6, hs * 0.7, 0, 0, hs * 0.6);
+    ctx.moveTo(0, hs * 0.72);
+    // Left lobe smooth cubic curve
+    ctx.bezierCurveTo(-hs * 0.75, hs * 0.25, -hs * 0.95, -hs * 0.35, -hs * 0.45, -hs * 0.75);
+    ctx.bezierCurveTo(-hs * 0.15, -hs * 0.95, 0, -hs * 0.6, 0, -hs * 0.35);
+    // Right lobe smooth cubic curve
+    ctx.bezierCurveTo(0, -hs * 0.6, hs * 0.15, -hs * 0.95, hs * 0.45, -hs * 0.75);
+    ctx.bezierCurveTo(hs * 0.95, -hs * 0.35, hs * 0.75, hs * 0.25, 0, hs * 0.72);
+    ctx.closePath();
+
+    // Soft ruby-tinted interior with subtle golden highlight
     ctx.fillStyle = 'rgba(100, 30, 50, 0.08)';
     ctx.fill();
-    ctx.strokeStyle = 'rgba(100, 30, 50, 0.35)';
+    ctx.strokeStyle = 'rgba(100, 30, 50, 0.4)';
     ctx.lineWidth = 1.8;
+    ctx.stroke();
+
+    // Inner fine heart line for luxury jewelry feel
+    ctx.beginPath();
+    const is = hs * 0.85;
+    ctx.moveTo(0, is * 0.72);
+    ctx.bezierCurveTo(-is * 0.75, is * 0.25, -is * 0.95, -is * 0.35, -is * 0.45, -is * 0.75);
+    ctx.bezierCurveTo(-is * 0.15, -is * 0.95, 0, -is * 0.6, 0, -is * 0.35);
+    ctx.bezierCurveTo(0, -is * 0.6, is * 0.15, -is * 0.95, is * 0.45, -is * 0.75);
+    ctx.bezierCurveTo(is * 0.95, -is * 0.35, is * 0.75, is * 0.25, 0, is * 0.72);
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.6)';
+    ctx.lineWidth = 1;
     ctx.stroke();
     ctx.restore();
 
-    // 5. Foil Typography: "A LITTLE SURPRISE!" & "Scratch to reveal our wedding date ❤️"
+    // 5. Foil Typography: Scaled dynamically to fit mobile & desktop without overflow
     ctx.save();
-    // Top Surprise Lead-in
-    ctx.font = 'bold 11px Cinzel, serif';
+    const leadSize = Math.max(9, Math.min(12, width * 0.024));
+    ctx.font = `bold ${leadSize}px Cinzel, serif`;
     ctx.fillStyle = '#641E32';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.letterSpacing = '3px';
-    ctx.shadowColor = 'rgba(255, 255, 255, 0.8)';
+    ctx.shadowColor = 'rgba(255, 255, 255, 0.85)';
     ctx.shadowBlur = 4;
-    ctx.fillText('✦  A  L I T T L E  S U R P R I S E !  ✦', width / 2, height * 0.26);
+    ctx.fillText('✦  A  L I T T L E  S U R P R I S E !  ✦', width / 2, height * 0.22);
 
     // Primary Instruction
-    ctx.font = 'italic 600 24px "Cormorant Garamond", Georgia, serif';
+    const instructSize = Math.max(16, Math.min(24, width * 0.046));
+    ctx.font = `italic 600 ${instructSize}px "Cormorant Garamond", Georgia, serif`;
     ctx.fillStyle = '#3E0E1B';
     ctx.shadowBlur = 6;
-    ctx.fillText('Scratch to reveal our wedding date  ❤', width / 2, height * 0.62);
+    ctx.fillText('Scratch to reveal our wedding date  ❤', width / 2, height * 0.64);
 
     // Subtle helper text at bottom
-    ctx.font = 'bold 9px Cinzel, serif';
+    const subSize = Math.max(8, Math.min(10, width * 0.02));
+    ctx.font = `bold ${subSize}px Cinzel, serif`;
     ctx.fillStyle = '#7A4B10';
-    ctx.letterSpacing = '2px';
     ctx.shadowBlur = 2;
-    ctx.fillText('✨ SWIPE HERE WITH FINGER OR MOUSE ✨', width / 2, height * 0.82);
+    ctx.fillText('✨ SWIPE HERE WITH FINGER OR MOUSE ✨', width / 2, height * 0.84);
     ctx.restore();
   }, []);
 
@@ -177,7 +196,7 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
     ctx.globalCompositeOperation = 'destination-out';
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
-    ctx.lineWidth = 55; // Generous, smooth scratch brush
+    ctx.lineWidth = 55;
 
     ctx.beginPath();
     ctx.moveTo(x1, y1);
@@ -214,7 +233,6 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
     const pct = Math.round((transparentCount / totalSamples) * 100);
     setScratchPercent(pct);
 
-    // Requirement: Reveal the complete date when approximately 55% has been cleared
     if (pct >= 55 && !isRevealed) {
       revealFullDate();
     }
@@ -280,34 +298,61 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
   };
 
   return (
-    <div className="relative w-full max-w-xl mx-auto flex flex-col items-center select-none">
-      {/* Scratch Card Frame */}
+    <div className="relative w-full max-w-xl mx-auto flex flex-col items-center select-none px-2 sm:px-0">
+      {/* Scratch Card Frame - Styled like a Luxury Indian Wedding Card */}
       <div
         ref={containerRef}
-        className="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-[24px] overflow-hidden border-2 border-[#C6A15B] shadow-[0_16px_45px_rgba(70,30,10,0.18)] transition-all duration-500"
+        className="relative w-full aspect-[16/11] sm:aspect-[16/9] min-h-[220px] sm:min-h-[260px] rounded-[24px] overflow-hidden border-2 border-[#C6A15B] shadow-[0_16px_45px_rgba(70,30,10,0.18),0_0_20px_rgba(198,161,91,0.22)] transition-all duration-500"
       >
         {/* ========================================================
-            1. UNDERNEATH REVEALED CONTENT: "12 NOVEMBER 2022"
+            1. UNDERNEATH REVEALED CONTENT: WEDDING DATE & TIME ONLY
             ======================================================== */}
-        <div className="absolute inset-0 w-full h-full p-6 sm:p-10 bg-gradient-to-br from-[#FFFDF9] via-[#FAF4EB] to-[#F5EADB] text-center flex flex-col items-center justify-center relative overflow-hidden">
-          {/* Subtle golden ambient shimmer */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#C6A15B]/10 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 w-full h-full p-4 sm:p-6 bg-gradient-to-br from-[#FFFDF9] via-[#FAF3E6] to-[#F5EAD4] text-center flex flex-col items-center justify-center relative overflow-hidden">
+          {/* Inner Decorative Gold Inset Frame */}
+          <div className="absolute inset-2 sm:inset-3 border border-[#C6A15B]/40 rounded-[18px] pointer-events-none" />
 
-          {/* Lead-in Label */}
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 bg-[#641E32]/10 border border-[#641E32]/25 text-[#641E32] font-cinzel text-[10px] sm:text-xs tracking-[0.25em] uppercase font-extrabold rounded-full mb-2">
-            <Sparkles className="w-3.5 h-3.5 text-[#C6A15B] fill-current" />
-            <span>Save Our Date</span>
-            <Sparkles className="w-3.5 h-3.5 text-[#C6A15B] fill-current" />
+          {/* Corner Flourishes */}
+          <div className="absolute top-2 left-2 w-5 h-5 pointer-events-none text-[#C6A15B]/75">
+            <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+              <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <div className="absolute top-2 right-2 w-5 h-5 pointer-events-none text-[#C6A15B]/75 rotate-90">
+            <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+              <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <div className="absolute bottom-2 left-2 w-5 h-5 pointer-events-none text-[#C6A15B]/75 -rotate-90">
+            <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+              <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <div className="absolute bottom-2 right-2 w-5 h-5 pointer-events-none text-[#C6A15B]/75 rotate-180">
+            <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+              <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+            </svg>
           </div>
 
+          {/* Top Label: Wedding Date */}
+          <span className="font-cinzel text-[10px] sm:text-xs uppercase tracking-[0.3em] text-[#8A6517] font-black block mb-1">
+            ✦ WEDDING DATE ✦
+          </span>
+
           {/* Prominent Revealed Wedding Date */}
-          <h3 className="font-cinzel text-3xl sm:text-5xl md:text-6xl text-[#4A0E1F] font-black tracking-wider uppercase drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] my-1 sm:my-2">
+          <h3 className="font-cinzel text-2xl sm:text-3xl md:text-4xl text-[#4A0E1F] font-black tracking-widest uppercase drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] my-1">
             12 NOVEMBER 2022
           </h3>
 
-          <p className="font-cormorant italic text-[#8A6517] text-lg sm:text-2xl font-bold tracking-wide">
-            Saturday • Palakollu, West Godavari
-          </p>
+          {/* Auspicious Muhurtham Time */}
+          <div className="inline-flex items-center gap-2 mt-1 px-3 py-0.5 bg-[#4A0E1F]/10 border border-[#C6A15B]/40 rounded-full">
+            <span className="font-cinzel text-[11px] sm:text-xs text-[#4A0E1F] font-extrabold tracking-wider uppercase">
+              MUHURTHAM: 6:38 PM
+            </span>
+          </div>
         </div>
 
         {/* ========================================================
@@ -337,7 +382,7 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
         <button
           type="button"
           onClick={revealFullDate}
-          className="mt-4 inline-flex items-center gap-2 px-6 py-2.5 bg-[#FFFDF9]/90 hover:bg-[#641E32] hover:text-[#FFFDF9] text-[#641E32] border border-[#C6A15B] rounded-full font-cinzel text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md cursor-pointer hover:shadow-lg hover:scale-105 active:scale-95"
+          className="mt-4 inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-[#FFFDF9] to-[#FAF3E3] hover:from-[#641E32] hover:to-[#7A152E] hover:text-[#FFFDF9] text-[#641E32] border border-[#C6A15B] rounded-full font-cinzel text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md cursor-pointer hover:shadow-lg hover:scale-105 active:scale-95"
         >
           <Wand2 className="w-3.5 h-3.5 text-[#C6A15B]" />
           <span>Reveal Date</span>
