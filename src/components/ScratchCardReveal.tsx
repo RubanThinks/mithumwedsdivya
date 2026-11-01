@@ -476,33 +476,33 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
           }}
         >
           {/* ========================================================
-              A. UNDERNEATH LAYER: ONLY Wedding Date & Time
+              A. UNDERNEATH LAYER: ONLY Wedding Date & Time (Properly Scaled to Fit Heart)
               ======================================================== */}
-          <div className="absolute inset-0 w-full h-full px-6 sm:px-12 flex flex-col items-center justify-center text-center bg-gradient-to-br from-[#4E0E22] via-[#102019] to-[#3B0715] relative overflow-hidden select-none">
+          <div className="absolute inset-0 w-full h-full px-8 sm:px-14 flex flex-col items-center justify-center text-center bg-gradient-to-br from-[#4E0E22] via-[#102019] to-[#3B0715] relative overflow-hidden select-none pb-2 sm:pb-4">
             {showCelebrationBadge && (
               <div className="absolute inset-0 bg-gold/25 pointer-events-none animate-pulse" />
             )}
 
             {/* Wedding Text */}
-            <p className="font-cinzel text-xs sm:text-sm uppercase tracking-[0.35em] text-gold-light font-black mb-1 drop-shadow-md">
+            <p className="font-cinzel text-[10px] sm:text-xs uppercase tracking-[0.25em] text-gold-light font-bold mb-1 drop-shadow-md">
               ✦ Wedding Ceremony ✦
             </p>
 
-            {/* Sacred Date: Grand "12" */}
-            <div className="font-playfair text-7xl sm:text-8xl md:text-9xl text-ivory font-black leading-none my-1 drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]">
+            {/* Sacred Date: Balanced "12" */}
+            <div className="font-playfair text-5xl sm:text-6xl md:text-7xl text-ivory font-black leading-tight my-0.5 drop-shadow-[0_4px_14px_rgba(0,0,0,0.95)]">
               12
             </div>
 
             {/* Month & Year */}
-            <div className="font-cinzel text-2xl sm:text-3xl md:text-4xl text-gold font-black tracking-[0.35em] uppercase drop-shadow-md mt-1 mb-2">
+            <div className="font-cinzel text-base sm:text-lg md:text-xl text-gold font-extrabold tracking-[0.25em] uppercase drop-shadow-md mt-0.5 mb-1.5">
               November 2022
             </div>
 
             {/* Sacred Muhurtham Time */}
-            <div className="font-poppins text-sm sm:text-base md:text-lg text-champagne font-extrabold uppercase tracking-[0.25em] drop-shadow-md">
+            <div className="font-poppins text-xs sm:text-sm text-champagne font-bold uppercase tracking-[0.15em] drop-shadow-md flex flex-wrap items-center justify-center gap-1.5">
               <span>Saturday</span>
-              <span className="mx-2 text-gold">•</span>
-              <span className="text-gold-light font-black">6:38 PM Muhurtham</span>
+              <span className="text-gold">•</span>
+              <span className="text-gold-light font-extrabold">6:38 PM Muhurtham</span>
             </div>
           </div>
 
