@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
-import { Sparkles, CheckCircle2, PartyPopper, Wand2 } from 'lucide-react';
+import { Sparkles, Wand2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 interface ScratchCardRevealProps {
@@ -476,46 +476,34 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
           }}
         >
           {/* ========================================================
-              A. UNDERNEATH LAYER: Auspicious Wedding Ceremony Details
+              A. UNDERNEATH LAYER: ONLY Wedding Date & Time
               ======================================================== */}
-          <div className="absolute inset-0 w-full h-full px-6 sm:px-12 pt-14 sm:pt-18 pb-12 bg-gradient-to-br from-[#4E0E22] via-[#102019] to-[#3B0715] text-center flex flex-col items-center justify-center relative overflow-hidden">
+          <div className="absolute inset-0 w-full h-full px-6 sm:px-12 flex flex-col items-center justify-center text-center bg-gradient-to-br from-[#4E0E22] via-[#102019] to-[#3B0715] relative overflow-hidden select-none">
             {showCelebrationBadge && (
               <div className="absolute inset-0 bg-gold/25 pointer-events-none animate-pulse" />
             )}
 
-            {/* Top Sacred Union Header */}
-            <div className="inline-flex items-center gap-2 px-4 py-1 bg-gold text-[#3F101E] font-cinzel text-[11px] sm:text-xs tracking-[0.25em] uppercase font-black rounded-full mb-1 sm:mb-2 shadow-lg">
-              <Sparkles className="w-3.5 h-3.5 fill-current" /> Auspicious Muhurtham Day
-            </div>
+            {/* Wedding Text */}
+            <p className="font-cinzel text-xs sm:text-sm uppercase tracking-[0.35em] text-gold-light font-black mb-1 drop-shadow-md">
+              ✦ Wedding Ceremony ✦
+            </p>
 
-            {/* Sacred Date Display */}
-            <div className="font-playfair text-6xl sm:text-7xl md:text-8xl text-ivory font-black leading-none my-1 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+            {/* Sacred Date: Grand "12" */}
+            <div className="font-playfair text-7xl sm:text-8xl md:text-9xl text-ivory font-black leading-none my-1 drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]">
               12
             </div>
 
-            <div className="font-cinzel text-xl sm:text-2xl md:text-3xl text-gold font-black tracking-[0.35em] uppercase drop-shadow-md">
+            {/* Month & Year */}
+            <div className="font-cinzel text-2xl sm:text-3xl md:text-4xl text-gold font-black tracking-[0.35em] uppercase drop-shadow-md mt-1 mb-2">
               November 2022
             </div>
 
-            <div className="font-poppins text-champagne text-xs sm:text-sm font-bold uppercase tracking-[0.25em] flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-2">
-              <span className="text-ivory">Saturday</span>
-              <span className="text-gold">•</span>
-              <span className="text-gold-light font-black text-sm sm:text-base">6:38 PM Muhurtham</span>
-              <span className="text-gold">•</span>
-              <span className="text-ivory">Dinner 7:00 PM</span>
+            {/* Sacred Muhurtham Time */}
+            <div className="font-poppins text-sm sm:text-base md:text-lg text-champagne font-extrabold uppercase tracking-[0.25em] drop-shadow-md">
+              <span>Saturday</span>
+              <span className="mx-2 text-gold">•</span>
+              <span className="text-gold-light font-black">6:38 PM Muhurtham</span>
             </div>
-
-            <div className="font-cormorant italic text-gold-light text-base sm:text-lg md:text-xl font-bold mt-2 max-w-md drop-shadow">
-              &ldquo;Two Hearts, Two Families, One Beautiful Beginning&rdquo;
-            </div>
-
-            {/* Celebration Badge Once Scratched */}
-            {showCelebrationBadge && (
-              <div className="mt-3 inline-flex items-center gap-2 px-5 py-1.5 bg-[#641E32]/95 border-2 border-gold rounded-full text-xs sm:text-sm text-gold-light font-cinzel tracking-wider uppercase font-black shadow-2xl animate-bounce">
-                <PartyPopper className="w-4 h-4 text-gold" /> Date Revealed • Blessings &amp; Joy!{' '}
-                <CheckCircle2 className="w-4 h-4 text-gold" />
-              </div>
-            )}
           </div>
 
           {/* ========================================================
