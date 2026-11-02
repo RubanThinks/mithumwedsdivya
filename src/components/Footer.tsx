@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
   return (
     <footer
       ref={sectionRef}
-      className="relative min-h-screen py-24 sm:py-32 md:py-40 flex items-center justify-center overflow-hidden bg-[#EEDCBF] text-[#2E1810] select-none"
+      className="relative min-h-screen py-24 sm:py-32 md:py-40 flex items-center justify-center overflow-hidden bg-[#2D0A1E] text-[#FFFDF9] select-none"
     >
       {/* ========================================================
           1. 100% VIBRANT BACKGROUND - ZERO FILTERS, ZERO OVERLAYS, ZERO TRANSPARENCY
@@ -136,20 +136,20 @@ const Footer: React.FC = () => {
       <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-10 text-center flex flex-col items-center justify-center">
         {/* Upper Heading: Sophisticated Serif */}
         <div ref={headingRef} className="space-y-3 mb-6 sm:mb-8">
-          <p className="font-cinzel text-xs sm:text-sm md:text-base uppercase tracking-[0.35em] text-[#8A6517] font-black drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)]">
+          <p className="font-cinzel text-xs sm:text-sm md:text-base uppercase tracking-[0.35em] text-[#F5D061] font-black drop-shadow-[0_2px_8px_rgba(40,10,25,0.95)]">
             ✦ A Beautiful Beginning, A Lifetime of Love ✦
           </p>
 
-          <p className="font-cormorant italic text-[#4A0E1F] text-xl sm:text-2xl md:text-3xl font-extrabold max-w-2xl mx-auto leading-relaxed drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+          <p className="font-cormorant italic text-[#FFFDF9] text-xl sm:text-2xl md:text-3xl font-extrabold max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(40,10,25,0.9)]">
             Thank you for being part of our celebration.
           </p>
         </div>
 
         {/* Small Ornamental Golden Divider */}
         <div className="flex items-center justify-center gap-3 w-48 mx-auto my-3 sm:my-4">
-          <span className="h-0.5 w-16 bg-gradient-to-r from-transparent via-[#8A6517] to-transparent" />
-          <span className="text-[#8A6517] text-base drop-shadow">✦</span>
-          <span className="h-0.5 w-16 bg-gradient-to-l from-transparent via-[#8A6517] to-transparent" />
+          <span className="h-0.5 w-16 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
+          <span className="text-[#F5D061] text-base drop-shadow-[0_2px_4px_rgba(40,10,25,0.8)]">✦</span>
+          <span className="h-0.5 w-16 bg-gradient-to-l from-transparent via-[#D4AF37] to-transparent" />
         </div>
 
         {/* Couple's Names: Large, Elegant & Prominent */}
@@ -157,7 +157,7 @@ const Footer: React.FC = () => {
           {/* Groom's Name */}
           <h2
             ref={groomRef}
-            className="font-great-vibes text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#3E0E1B] font-normal leading-none drop-shadow-[0_2px_4px_rgba(255,255,255,0.85)] tracking-wide"
+            className="font-great-vibes text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#FFFDF9] font-normal leading-none drop-shadow-[0_4px_16px_rgba(40,10,25,0.95)] tracking-wide"
           >
             K. Midhun Sri
           </h2>
@@ -167,15 +167,15 @@ const Footer: React.FC = () => {
             ref={heartRef}
             className="my-2 sm:my-3 flex items-center justify-center"
           >
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-[#FFF8EA] to-[#F5E6CC] border border-[#C6A15B] shadow-[0_4px_16px_rgba(138,101,23,0.3)] flex items-center justify-center">
-              <Heart className="w-6 h-6 sm:w-7 sm:h-7 text-[#7A152E] fill-[#7A152E] drop-shadow-[0_2px_4px_rgba(122,21,46,0.4)]" />
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-[#FFFDF9]/95 to-[#F8EFF5]/90 border border-[#D4AF37] shadow-[0_4px_16px_rgba(212,175,55,0.35)] flex items-center justify-center">
+              <Heart className="w-6 h-6 sm:w-7 sm:h-7 text-[#801336] fill-[#801336] drop-shadow-[0_2px_4px_rgba(128,19,54,0.4)]" />
             </div>
           </div>
 
           {/* Bride's Name */}
           <h2
             ref={brideRef}
-            className="font-great-vibes text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#3E0E1B] font-normal leading-none drop-shadow-[0_2px_4px_rgba(255,255,255,0.85)] tracking-wide"
+            className="font-great-vibes text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#FFFDF9] font-normal leading-none drop-shadow-[0_4px_16px_rgba(40,10,25,0.95)] tracking-wide"
           >
             K. Divya
           </h2>
@@ -183,18 +183,18 @@ const Footer: React.FC = () => {
 
         {/* Small Ornamental Golden Divider */}
         <div className="flex items-center justify-center gap-3 w-48 mx-auto my-3 sm:my-4">
-          <span className="h-0.5 w-16 bg-gradient-to-r from-transparent via-[#8A6517] to-transparent" />
-          <span className="text-[#8A6517] text-base drop-shadow">✦</span>
-          <span className="h-0.5 w-16 bg-gradient-to-l from-transparent via-[#8A6517] to-transparent" />
+          <span className="h-0.5 w-16 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
+          <span className="text-[#F5D061] text-base drop-shadow-[0_2px_4px_rgba(40,10,25,0.8)]">✦</span>
+          <span className="h-0.5 w-16 bg-gradient-to-l from-transparent via-[#D4AF37] to-transparent" />
         </div>
 
         {/* Supporting Message & Tagline */}
         <div ref={messageRef} className="space-y-3 mt-3 max-w-xl mx-auto">
-          <p className="font-cinzel text-xs sm:text-sm md:text-base text-[#6E5014] font-black uppercase tracking-[0.25em] drop-shadow-[0_1px_2px_rgba(255,255,255,0.85)]">
+          <p className="font-cinzel text-xs sm:text-sm md:text-base text-[#F5D061] font-black uppercase tracking-[0.25em] drop-shadow-[0_2px_8px_rgba(40,10,25,0.9)]">
             Two hearts, two families, one beautiful beginning.
           </p>
 
-          <p className="font-cormorant italic text-lg sm:text-xl md:text-2xl text-[#2E1810] font-bold leading-relaxed drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]">
+          <p className="font-cormorant italic text-lg sm:text-xl md:text-2xl text-[#FFF8EA] font-bold leading-relaxed drop-shadow-[0_2px_8px_rgba(40,10,25,0.85)]">
             We are grateful for your love, blessings and presence in our lives.
           </p>
         </div>
@@ -202,12 +202,12 @@ const Footer: React.FC = () => {
         {/* Bottom Closing Note: With Warmest Regards */}
         <div
           ref={blessingsRef}
-          className="mt-8 pt-6 border-t border-[#C6A15B]/40 max-w-md mx-auto"
+          className="mt-8 pt-6 border-t border-[#D4AF37]/40 max-w-md mx-auto"
         >
-          <p className="font-cinzel text-[11px] sm:text-xs tracking-[0.3em] uppercase text-[#7A152E] font-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+          <p className="font-cinzel text-[11px] sm:text-xs tracking-[0.3em] uppercase text-[#F5D061] font-black drop-shadow-[0_2px_8px_rgba(40,10,25,0.9)]">
             With Love &amp; Gratitude • Midhun &amp; Divya
           </p>
-          <p className="font-poppins text-[10px] sm:text-xs text-[#5C4015] tracking-widest uppercase font-semibold mt-1">
+          <p className="font-poppins text-[10px] sm:text-xs text-[#FFF8EA]/85 tracking-widest uppercase font-semibold mt-1 drop-shadow-[0_1px_4px_rgba(40,10,25,0.8)]">
             Palakollu • West Godavari • Andhra Pradesh
           </p>
         </div>

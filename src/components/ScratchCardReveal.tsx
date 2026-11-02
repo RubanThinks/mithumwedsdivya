@@ -21,7 +21,7 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
       angle: 60,
       spread: 75,
       origin: { x: 0.2, y: 0.65 },
-      colors: ['#D4AF37', '#FFFDF9', '#641E32', '#C6A15B', '#FFDF78'],
+      colors: ['#D4AF37', '#FFFDF9', '#641E32', '#D4AF37', '#FFDF78'],
     });
 
     confetti({
@@ -29,7 +29,7 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
       angle: 120,
       spread: 75,
       origin: { x: 0.8, y: 0.65 },
-      colors: ['#D4AF37', '#FFFDF9', '#641E32', '#C6A15B', '#FFDF78'],
+      colors: ['#D4AF37', '#FFFDF9', '#641E32', '#D4AF37', '#FFDF78'],
     });
 
     setTimeout(() => {
@@ -161,7 +161,7 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
 
     // 2. Precious Gold Filigree Outline
     const goldStroke = ctx.createLinearGradient(4.5, 2.5, 43.5, 38.5);
-    goldStroke.addColorStop(0, '#C6A15B');
+    goldStroke.addColorStop(0, '#D4AF37');
     goldStroke.addColorStop(0.35, '#FFF8DC');
     goldStroke.addColorStop(0.65, '#D4AF37');
     goldStroke.addColorStop(1, '#996515');
@@ -350,35 +350,35 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
       {/* Scratch Card Frame - Styled like a Luxury Indian Wedding Card with comfortable breathing room */}
       <div
         ref={containerRef}
-        className="relative w-full h-[270px] sm:h-[310px] md:h-[330px] rounded-[24px] overflow-hidden border-2 border-[#C6A15B] shadow-[0_20px_50px_rgba(70,30,10,0.18),0_0_25px_rgba(198,161,91,0.22)] transition-all duration-500"
+        className="relative w-full h-[270px] sm:h-[310px] md:h-[330px] rounded-[24px] overflow-hidden border-2 border-[#D4AF37] shadow-[0_20px_50px_rgba(40,10,25,0.22),0_0_25px_rgba(212,175,55,0.20)] transition-all duration-500"
       >
         {/* ========================================================
             1. UNDERNEATH REVEALED CONTENT: WEDDING DATE & TIME ONLY
             ======================================================== */}
-        <div className="absolute inset-0 w-full h-full p-4 sm:p-6 bg-gradient-to-br from-[#FFFDF9] via-[#FAF3E6] to-[#F5EAD4] text-center flex flex-col items-center justify-center relative overflow-hidden">
+        <div className="absolute inset-0 w-full h-full p-4 sm:p-6 bg-gradient-to-br from-[#FFFDF9]/96 via-[#FAF6F8]/93 to-[#F8EFF5]/95 backdrop-blur-md text-center flex flex-col items-center justify-center relative overflow-hidden">
           {/* Inner Decorative Gold Inset Frame */}
-          <div className="absolute inset-2 sm:inset-3 border border-[#C6A15B]/40 rounded-[18px] pointer-events-none" />
+          <div className="absolute inset-2 sm:inset-3 border border-[#D4AF37]/40 rounded-[18px] pointer-events-none" />
 
           {/* Corner Flourishes */}
-          <div className="absolute top-2 left-2 w-5 h-5 pointer-events-none text-[#C6A15B]/75">
+          <div className="absolute top-2 left-2 w-5 h-5 pointer-events-none text-[#D4AF37]/75">
             <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
               <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
               <circle cx="5" cy="5" r="1.5" fill="currentColor" />
             </svg>
           </div>
-          <div className="absolute top-2 right-2 w-5 h-5 pointer-events-none text-[#C6A15B]/75 rotate-90">
+          <div className="absolute top-2 right-2 w-5 h-5 pointer-events-none text-[#D4AF37]/75 rotate-90">
             <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
               <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
               <circle cx="5" cy="5" r="1.5" fill="currentColor" />
             </svg>
           </div>
-          <div className="absolute bottom-2 left-2 w-5 h-5 pointer-events-none text-[#C6A15B]/75 -rotate-90">
+          <div className="absolute bottom-2 left-2 w-5 h-5 pointer-events-none text-[#D4AF37]/75 -rotate-90">
             <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
               <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
               <circle cx="5" cy="5" r="1.5" fill="currentColor" />
             </svg>
           </div>
-          <div className="absolute bottom-2 right-2 w-5 h-5 pointer-events-none text-[#C6A15B]/75 rotate-180">
+          <div className="absolute bottom-2 right-2 w-5 h-5 pointer-events-none text-[#D4AF37]/75 rotate-180">
             <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
               <path d="M 2 14 L 2 4 C 2 2.9 2.9 2 4 2 L 14 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
               <circle cx="5" cy="5" r="1.5" fill="currentColor" />
@@ -386,18 +386,18 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
           </div>
 
           {/* Top Label: Wedding Date */}
-          <span className="font-cinzel text-[10px] sm:text-xs uppercase tracking-[0.3em] text-[#8A6517] font-black block mb-1">
+          <span className="font-cinzel text-[10px] sm:text-xs uppercase tracking-[0.3em] text-[#801336] font-black block mb-1">
             ✦ WEDDING DATE ✦
           </span>
 
           {/* Prominent Revealed Wedding Date */}
-          <h3 className="font-cinzel text-2xl sm:text-3xl md:text-4xl text-[#4A0E1F] font-black tracking-widest uppercase drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] my-1">
+          <h3 className="font-cinzel text-2xl sm:text-3xl md:text-4xl text-[#4A0E2E] font-black tracking-widest uppercase drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] my-1">
             12 NOVEMBER 2026
           </h3>
 
           {/* Auspicious Muhurtham Time */}
-          <div className="inline-flex items-center gap-2 mt-1 px-3 py-0.5 bg-[#4A0E1F]/10 border border-[#C6A15B]/40 rounded-full">
-            <span className="font-cinzel text-[11px] sm:text-xs text-[#4A0E1F] font-extrabold tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 mt-1 px-3 py-0.5 bg-[#4A0E2E]/10 border border-[#D4AF37]/50 rounded-full">
+            <span className="font-cinzel text-[11px] sm:text-xs text-[#4A0E2E] font-extrabold tracking-wider uppercase">
               MUHURTHAM: 6:38 PM
             </span>
           </div>
@@ -430,14 +430,14 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
         <button
           type="button"
           onClick={revealFullDate}
-          className="mt-4 inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-[#FFFDF9] to-[#FAF3E3] hover:from-[#641E32] hover:to-[#7A152E] hover:text-[#FFFDF9] text-[#641E32] border border-[#C6A15B] rounded-full font-cinzel text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md cursor-pointer hover:shadow-lg hover:scale-105 active:scale-95"
+          className="mt-4 inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-[#FFFDF9] to-[#F8EFF5] hover:from-[#641E32] hover:to-[#7A152E] hover:text-[#FFFDF9] text-[#641E32] border border-[#D4AF37] rounded-full font-cinzel text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md cursor-pointer hover:shadow-lg hover:scale-105 active:scale-95"
         >
-          <Wand2 className="w-3.5 h-3.5 text-[#C6A15B]" />
+          <Wand2 className="w-3.5 h-3.5 text-[#D4AF37]" />
           <span>Reveal Date</span>
         </button>
       ) : (
         <div className="mt-3 inline-flex items-center gap-2 text-xs font-cinzel text-[#641E32] font-black tracking-widest uppercase">
-          <Sparkles className="w-4 h-4 text-[#C6A15B]" />
+          <Sparkles className="w-4 h-4 text-[#D4AF37]" />
           <span>Wedding Date Revealed!</span>
         </div>
       )}

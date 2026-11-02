@@ -5,9 +5,9 @@
   --color-burgundy: #641E32;
   --color-burgundy-dark: #3F101E;
   --color-burgundy-light: #8B2A47;
-  --color-gold: #C6A15B;
-  --color-gold-light: #E0C78F;
-  --color-gold-dark: #9E7D3B;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F5D061;
+  --color-gold-dark: #A67C1E;
   --color-ivory: #FFFDF9;
   --color-ivory-dark: #F5EFEB;
   --color-champagne: #EADBC8;
@@ -47,17 +47,17 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C6A15B;
+  background: #D4AF37;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #E0C78F;
+  background: #F5D061;
 }
 
 /* Selection color */
 ::selection {
-  background-color: rgba(198, 161, 91, 0.35);
+  background-color: rgba(212, 175, 55, 0.35);
   color: #FFFDF9;
 }
 
@@ -147,5 +147,5 @@ html.lenis, html.lenis body {
   flex: 1;
   max-width: 140px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #C6A15B, transparent);
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
 }

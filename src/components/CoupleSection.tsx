@@ -88,7 +88,7 @@ const CoupleSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 md:py-36 overflow-hidden bg-[#EEDCBF]"
+      className="relative py-24 md:py-36 overflow-hidden bg-[#2D0A1E]"
     >
       {/* ========================================================
           1. 100% VIBRANT BACKGROUND - ZERO OVERLAYS, ZERO FILTERS, ZERO OPACITY REDUCTION
@@ -121,33 +121,33 @@ const CoupleSection = () => {
 
       {/* FOREGROUND CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-        {/* EDITORIAL TEXT: High-Contrast Deep Burgundy (#3E0E1B), Dark Antique Gold (#8A6517), Crisp Drop Shadows */}
+        {/* EDITORIAL TEXT: High-Contrast Royal Wine Maroon (#4A0E2E), Luminous Gold (#D4AF37), Crisp Drop Shadows */}
         <div ref={headingRef} className="text-center max-w-3xl mx-auto mb-14 md:mb-20">
-          <p className="font-cinzel text-xs md:text-sm uppercase tracking-[0.35em] text-[#69182C] font-black mb-2 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+          <p className="font-cinzel text-xs md:text-sm uppercase tracking-[0.35em] text-[#7A152E] font-black mb-2 drop-shadow-[0_1px_2px_rgba(255,255,255,0.9)]">
             Meet the Couple
           </p>
 
-          <h2 className="font-great-vibes text-5xl sm:text-6xl md:text-8xl text-[#4A0E1F] font-normal leading-tight drop-shadow-[0_2px_4px_rgba(255,255,255,0.7)]">
+          <h2 className="font-great-vibes text-5xl sm:text-6xl md:text-8xl text-[#4A0E2E] font-normal leading-tight drop-shadow-[0_2px_4px_rgba(255,255,255,0.85)]">
             K. Midhun Sri
           </h2>
 
           <div className="my-1 md:my-2 flex items-center justify-center gap-4">
-            <span className="h-0.5 w-12 sm:w-20 bg-gradient-to-r from-transparent via-[#8A6517] to-transparent" />
-            <span className="font-cormorant italic text-[#8A6517] text-2xl md:text-4xl font-extrabold drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+            <span className="h-0.5 w-12 sm:w-20 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
+            <span className="font-cormorant italic text-[#D4AF37] text-2xl md:text-4xl font-extrabold drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
               &amp;
             </span>
-            <span className="h-0.5 w-12 sm:w-20 bg-gradient-to-l from-transparent via-[#8A6517] to-transparent" />
+            <span className="h-0.5 w-12 sm:w-20 bg-gradient-to-l from-transparent via-[#D4AF37] to-transparent" />
           </div>
 
-          <h2 className="font-great-vibes text-5xl sm:text-6xl md:text-8xl text-[#4A0E1F] font-normal leading-tight drop-shadow-[0_2px_4px_rgba(255,255,255,0.7)]">
+          <h2 className="font-great-vibes text-5xl sm:text-6xl md:text-8xl text-[#4A0E2E] font-normal leading-tight drop-shadow-[0_2px_4px_rgba(255,255,255,0.85)]">
             K. Divya
           </h2>
 
           <div className="ornamental-divider mx-auto my-4 max-w-xs">
-            <span className="text-[#8A6517] text-xl font-bold">✦</span>
+            <span className="text-[#D4AF37] text-xl font-bold">✦</span>
           </div>
 
-          <p className="font-cormorant italic text-[#2E1810] text-xl sm:text-2xl md:text-3xl font-extrabold drop-shadow-[0_1px_3px_rgba(255,255,255,0.8)]">
+          <p className="font-cormorant italic text-[#3B0E28] text-xl sm:text-2xl md:text-3xl font-extrabold drop-shadow-[0_1px_3px_rgba(255,255,255,0.85)]">
             Two Hearts, Two Families, One Beautiful Beginning.
           </p>
         </div>
@@ -172,10 +172,10 @@ const CoupleSection = () => {
               />
             </div>
             <div className="mt-4 text-center">
-              <span className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#8A6517] font-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+              <span className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#801336] font-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
                 The Groom
               </span>
-              <h3 className="font-cormorant text-2xl text-[#3E0E1B] font-bold drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+              <h3 className="font-cormorant text-2xl text-[#4A0E2E] font-bold drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
                 K. Midhun Sri
               </h3>
             </div>
@@ -183,7 +183,7 @@ const CoupleSection = () => {
 
           {/* Photograph 3: Couple's Combined Photograph (Center, Prominent, 4/5 Aspect) */}
           <div className="editorial-photo-card col-span-4 -translate-y-4 flex flex-col items-center z-10">
-            <div className="relative w-full aspect-[4/5] rounded-[34px] overflow-hidden shadow-[0_20px_45px_rgba(0,0,0,0.30)] transition-all duration-500 hover:-translate-y-2 group ring-2 ring-[#C6A15B]/40 hover:ring-[#C6A15B]">
+            <div className="relative w-full aspect-[4/5] rounded-[34px] overflow-hidden shadow-[0_20px_45px_rgba(0,0,0,0.30)] transition-all duration-500 hover:-translate-y-2 group ring-2 ring-[#D4AF37]/50 hover:ring-[#D4AF37]">
               <img
                 src="/images/couple.jpg"
                 alt="Midhun Sri & Divya Together"
@@ -193,10 +193,10 @@ const CoupleSection = () => {
               />
             </div>
             <div className="mt-4 text-center">
-              <span className="inline-block px-3.5 py-1 bg-[#4A0E1F] text-[#F3E5AB] font-cinzel text-[10px] uppercase tracking-[0.25em] font-black rounded-full mb-1 shadow-md">
+              <span className="inline-block px-3.5 py-1 bg-gradient-to-r from-[#641E32] to-[#801336] text-[#F3E5AB] font-cinzel text-[10px] uppercase tracking-[0.25em] font-black rounded-full mb-1 shadow-md">
                 Together Forever
               </span>
-              <h3 className="font-great-vibes text-4xl text-[#3E0E1B] drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+              <h3 className="font-great-vibes text-4xl text-[#4A0E2E] drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
                 Midhun &amp; Divya
               </h3>
             </div>
@@ -214,10 +214,10 @@ const CoupleSection = () => {
               />
             </div>
             <div className="mt-4 text-center">
-              <span className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#8A6517] font-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+              <span className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#801336] font-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
                 The Bride
               </span>
-              <h3 className="font-cormorant text-2xl text-[#3E0E1B] font-bold drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+              <h3 className="font-cormorant text-2xl text-[#4A0E2E] font-bold drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
                 K. Divya
               </h3>
             </div>
@@ -230,7 +230,7 @@ const CoupleSection = () => {
         <div ref={mobileGalleryRef} className="block md:hidden max-w-md mx-auto space-y-8">
           {/* Couple Combined (Center Top) */}
           <div className="editorial-photo-mobile flex flex-col items-center">
-            <div className="relative w-full aspect-[4/5] rounded-[30px] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.28)] ring-2 ring-[#C6A15B]/40">
+            <div className="relative w-full aspect-[4/5] rounded-[30px] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.28)] ring-2 ring-[#D4AF37]/50">
               <img
                 src="/images/couple.jpg"
                 alt="Midhun Sri & Divya Together"
@@ -240,10 +240,10 @@ const CoupleSection = () => {
               />
             </div>
             <div className="mt-3 text-center">
-              <span className="inline-block px-3 py-0.5 bg-[#4A0E1F] text-[#F3E5AB] font-cinzel text-[10px] uppercase tracking-[0.2em] font-black rounded-full mb-1 shadow">
+              <span className="inline-block px-3 py-0.5 bg-gradient-to-r from-[#641E32] to-[#801336] text-[#F3E5AB] font-cinzel text-[10px] uppercase tracking-[0.2em] font-black rounded-full mb-1 shadow">
                 Together Forever
               </span>
-              <h3 className="font-great-vibes text-3xl text-[#3E0E1B] drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+              <h3 className="font-great-vibes text-3xl text-[#4A0E2E] drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
                 Midhun &amp; Divya
               </h3>
             </div>
@@ -263,10 +263,10 @@ const CoupleSection = () => {
                 />
               </div>
               <div className="mt-2 text-center">
-                <span className="font-cinzel text-[9px] uppercase tracking-wider text-[#8A6517] font-black">
+                <span className="font-cinzel text-[9px] uppercase tracking-wider text-[#801336] font-black">
                   The Groom
                 </span>
-                <h4 className="font-cormorant text-base text-[#3E0E1B] font-extrabold leading-tight">
+                <h4 className="font-cormorant text-base text-[#4A0E2E] font-extrabold leading-tight">
                   K. Midhun Sri
                 </h4>
               </div>
@@ -284,10 +284,10 @@ const CoupleSection = () => {
                 />
               </div>
               <div className="mt-2 text-center">
-                <span className="font-cinzel text-[9px] uppercase tracking-wider text-[#8A6517] font-black">
+                <span className="font-cinzel text-[9px] uppercase tracking-wider text-[#801336] font-black">
                   The Bride
                 </span>
-                <h4 className="font-cormorant text-base text-[#3E0E1B] font-extrabold leading-tight">
+                <h4 className="font-cormorant text-base text-[#4A0E2E] font-extrabold leading-tight">
                   K. Divya
                 </h4>
               </div>

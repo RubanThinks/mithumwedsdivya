@@ -90,11 +90,11 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ isVisible, onOpenInvitation }
 
           {/* Golden Ornamental Frame - Strictly contained inside viewport */}
           <div className="absolute inset-3 sm:inset-5 md:inset-6 pointer-events-none z-10">
-            <div className="absolute inset-0 border border-[#8A6517]/40 md:border-gold/50 rounded-lg">
-              <div className="absolute -top-1 -left-1 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-l-2 border-[#8A6517] md:border-gold rounded-tl-lg" />
-              <div className="absolute -top-1 -right-1 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-r-2 border-[#8A6517] md:border-gold rounded-tr-lg" />
-              <div className="absolute -bottom-1 -left-1 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-l-2 border-[#8A6517] md:border-gold rounded-bl-lg" />
-              <div className="absolute -bottom-1 -right-1 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-r-2 border-[#8A6517] md:border-gold rounded-br-lg" />
+            <div className="absolute inset-0 border border-[#D4AF37]/40 md:border-gold/50 rounded-lg">
+              <div className="absolute -top-1 -left-1 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-l-2 border-[#D4AF37] md:border-gold rounded-tl-lg" />
+              <div className="absolute -top-1 -right-1 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-r-2 border-[#D4AF37] md:border-gold rounded-tr-lg" />
+              <div className="absolute -bottom-1 -left-1 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-l-2 border-[#D4AF37] md:border-gold rounded-bl-lg" />
+              <div className="absolute -bottom-1 -right-1 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-r-2 border-[#D4AF37] md:border-gold rounded-br-lg" />
             </div>
           </div>
 
@@ -105,39 +105,39 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ isVisible, onOpenInvitation }
           <div className="relative z-20 text-center max-w-xl mx-auto flex flex-col items-center justify-center my-auto px-2">
             {/* Lead-in: A Celebration of Love - Positioned just above couple's names, away from top floral overhang */}
             <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2 sm:mb-4">
-              <span className="h-0.5 w-6 sm:w-12 bg-gradient-to-r from-transparent via-[#8A6517] to-transparent md:via-gold" />
-              <p className="font-cinzel tracking-[0.25em] text-[#8A6517] md:text-gold-light text-xs sm:text-sm uppercase font-black drop-shadow-[0_1px_3px_rgba(255,255,255,0.95)] md:drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
+              <span className="h-0.5 w-6 sm:w-12 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent md:via-gold" />
+              <p className="font-cinzel tracking-[0.25em] text-[#D4AF37] md:text-gold-light text-xs sm:text-sm uppercase font-black drop-shadow-[0_1px_3px_rgba(255,255,255,0.95)] md:drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
                 A Celebration of Love
               </p>
-              <span className="h-0.5 w-6 sm:w-12 bg-gradient-to-l from-transparent via-[#8A6517] to-transparent md:via-gold" />
+              <span className="h-0.5 w-6 sm:w-12 bg-gradient-to-l from-transparent via-[#D4AF37] to-transparent md:via-gold" />
             </div>
 
-            {/* Groom Name: Burgundy on Mobile, Ivory on Desktop */}
-            <h1 className="font-great-vibes text-[#3E0E1B] md:text-ivory text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none font-normal drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] md:drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+            {/* Groom Name: Royal Velvet Maroon on Mobile, Ivory on Desktop */}
+            <h1 className="font-great-vibes text-[#4A0E2E] md:text-ivory text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none font-normal drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] md:drop-shadow-[0_4px_16px_rgba(50,10,30,0.95)]">
               K. Midhun Sri
             </h1>
 
             {/* Ampersand */}
             <div className="my-1 sm:my-2 flex items-center justify-center gap-3">
-              <span className="h-0.5 w-8 sm:w-12 bg-gradient-to-r from-transparent via-[#8A6517] to-transparent md:via-gold" />
-              <span className="font-cormorant italic text-[#7A152E] md:text-gold text-2xl sm:text-3xl md:text-4xl font-black drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)] md:drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)]">
+              <span className="h-0.5 w-8 sm:w-12 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent md:via-gold" />
+              <span className="font-cormorant italic text-[#8A1834] md:text-gold text-2xl sm:text-3xl md:text-4xl font-black drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)] md:drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)]">
                 &amp;
               </span>
-              <span className="h-0.5 w-8 sm:w-12 bg-gradient-to-l from-transparent via-[#8A6517] to-transparent md:via-gold" />
+              <span className="h-0.5 w-8 sm:w-12 bg-gradient-to-l from-transparent via-[#D4AF37] to-transparent md:via-gold" />
             </div>
 
-            {/* Bride Name: Burgundy on Mobile, Ivory on Desktop */}
-            <h1 className="font-great-vibes text-[#3E0E1B] md:text-ivory text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none font-normal drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] md:drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+            {/* Bride Name: Royal Velvet Maroon on Mobile, Ivory on Desktop */}
+            <h1 className="font-great-vibes text-[#4A0E2E] md:text-ivory text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none font-normal drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] md:drop-shadow-[0_4px_16px_rgba(50,10,30,0.95)]">
               K. Divya
             </h1>
 
             {/* Ornamental divider */}
             <div className="ornamental-divider my-2 sm:my-3 w-48 mx-auto">
-              <span className="text-[#8A6517] md:text-gold text-lg drop-shadow-[0_1px_2px_rgba(255,255,255,0.9)] md:drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">✦</span>
+              <span className="text-[#D4AF37] md:text-gold text-lg drop-shadow-[0_1px_2px_rgba(255,255,255,0.9)] md:drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">✦</span>
             </div>
 
-            {/* Invitation text: Deep Burgundy on Mobile, Champagne on Desktop */}
-            <p className="font-cormorant text-[#4A0E1F] md:text-champagne text-base sm:text-lg md:text-xl font-bold leading-snug max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(255,255,255,0.9)] md:drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)] px-2">
+            {/* Invitation text: Deep Royal Maroon on Mobile, Champagne on Desktop */}
+            <p className="font-cormorant text-[#4A0E2E] md:text-champagne text-base sm:text-lg md:text-xl font-bold leading-snug max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(255,255,255,0.9)] md:drop-shadow-[0_2px_6px_rgba(50,10,30,0.95)] px-2">
               Together with their families, invite you to celebrate their wedding.
             </p>
           </div>
@@ -146,7 +146,7 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ isVisible, onOpenInvitation }
           <div className="relative z-30 shrink-0 w-full flex justify-center pb-2 sm:pb-3">
             <motion.button
               type="button"
-              className="font-cinzel tracking-[0.25em] uppercase text-xs sm:text-sm font-black text-ivory border-2 border-gold bg-[#641E32] hover:bg-gold hover:text-burgundy-dark px-9 sm:px-12 py-3.5 sm:py-4 cursor-pointer rounded-full transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.65)] hover:scale-105 active:scale-95 touch-manipulation"
+              className="font-cinzel tracking-[0.25em] uppercase text-xs sm:text-sm font-black text-ivory border-2 border-gold bg-gradient-to-r from-[#641E32] to-[#801336] hover:from-gold hover:to-[#E6C687] hover:text-[#4A0E2E] px-9 sm:px-12 py-3.5 sm:py-4 cursor-pointer rounded-full transition-all duration-300 shadow-[0_8px_30px_rgba(60,10,30,0.65)] hover:scale-105 active:scale-95 touch-manipulation"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={onOpenInvitation}

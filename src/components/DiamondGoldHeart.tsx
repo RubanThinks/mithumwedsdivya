@@ -67,7 +67,7 @@ const DiamondGoldHeart: React.FC = () => {
         <defs>
           {/* Royal Antique Gold Foil Gradient */}
           <linearGradient id="goldHeartStroke" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#C6A15B" />
+            <stop offset="0%" stopColor="#F5D061" />
             <stop offset="35%" stopColor="#FFF8DC" />
             <stop offset="65%" stopColor="#D4AF37" />
             <stop offset="100%" stopColor="#996515" />
