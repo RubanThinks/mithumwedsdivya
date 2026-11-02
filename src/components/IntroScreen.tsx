@@ -54,7 +54,8 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ isVisible, onOpenInvitation }
       {isVisible && (
         <motion.div
           key="intro-screen"
-          className="fixed inset-0 z-50 w-screen h-screen flex flex-col items-center justify-between overflow-hidden py-4 sm:py-6 md:py-8 px-4"
+          className="fixed inset-0 z-50 w-full h-[100dvh] max-h-[100dvh] flex flex-col items-center justify-between overflow-hidden px-4 pt-6 pb-8 sm:pb-10"
+          style={{ paddingBottom: 'max(2.2rem, calc(env(safe-area-inset-bottom, 0px) + 1.5rem))' }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.02, transition: { duration: 0.8 } }}
@@ -97,17 +98,20 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ isVisible, onOpenInvitation }
             </div>
           </div>
 
-          {/* TOP SECTION: A Celebration of Love */}
-          <div className="relative z-20 text-center flex items-center justify-center gap-2 pt-2 sm:pt-4">
-            <span className="h-0.5 w-6 sm:w-12 bg-gradient-to-r from-transparent via-[#8A6517] to-transparent md:via-gold" />
-            <p className="font-cinzel tracking-[0.25em] text-[#8A6517] md:text-gold-light text-xs sm:text-sm uppercase font-black drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)] md:drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
-              A Celebration of Love
-            </p>
-            <span className="h-0.5 w-6 sm:w-12 bg-gradient-to-l from-transparent via-[#8A6517] to-transparent md:via-gold" />
-          </div>
+          {/* Subtle top spacer to maintain balanced flex distribution without crowding top decorations */}
+          <div className="w-full h-2 sm:h-4 pointer-events-none" />
 
-          {/* CENTER SECTION: Couple Names and Tagline */}
-          <div className="relative z-20 text-center max-w-xl mx-auto flex flex-col items-center justify-center my-auto">
+          {/* CENTER SECTION: A Celebration of Love, Couple Names and Tagline (Middle-aligned) */}
+          <div className="relative z-20 text-center max-w-xl mx-auto flex flex-col items-center justify-center my-auto px-2">
+            {/* Lead-in: A Celebration of Love - Positioned just above couple's names, away from top floral overhang */}
+            <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2 sm:mb-4">
+              <span className="h-0.5 w-6 sm:w-12 bg-gradient-to-r from-transparent via-[#8A6517] to-transparent md:via-gold" />
+              <p className="font-cinzel tracking-[0.25em] text-[#8A6517] md:text-gold-light text-xs sm:text-sm uppercase font-black drop-shadow-[0_1px_3px_rgba(255,255,255,0.95)] md:drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
+                A Celebration of Love
+              </p>
+              <span className="h-0.5 w-6 sm:w-12 bg-gradient-to-l from-transparent via-[#8A6517] to-transparent md:via-gold" />
+            </div>
+
             {/* Groom Name: Burgundy on Mobile, Ivory on Desktop */}
             <h1 className="font-great-vibes text-[#3E0E1B] md:text-ivory text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none font-normal drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] md:drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
               K. Midhun Sri
@@ -138,11 +142,11 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ isVisible, onOpenInvitation }
             </p>
           </div>
 
-          {/* BOTTOM SECTION: Open Invitation Button (Permanently Anchored & Visible) */}
-          <div className="relative z-20 pb-4 sm:pb-6 flex justify-center w-full">
+          {/* BOTTOM SECTION: Open Invitation Button (Comfortably elevated in tapping area, zero negative offset) */}
+          <div className="relative z-30 shrink-0 w-full flex justify-center pb-2 sm:pb-3">
             <motion.button
               type="button"
-              className="font-cinzel tracking-[0.25em] uppercase text-xs sm:text-sm font-black text-ivory border-2 border-gold bg-[#641E32] hover:bg-gold hover:text-burgundy-dark px-9 sm:px-12 py-3.5 sm:py-4 cursor-pointer rounded-full transition-all duration-300 shadow-[0_6px_30px_rgba(0,0,0,0.9)] hover:scale-105 active:scale-95"
+              className="font-cinzel tracking-[0.25em] uppercase text-xs sm:text-sm font-black text-ivory border-2 border-gold bg-[#641E32] hover:bg-gold hover:text-burgundy-dark px-9 sm:px-12 py-3.5 sm:py-4 cursor-pointer rounded-full transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.65)] hover:scale-105 active:scale-95 touch-manipulation"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={onOpenInvitation}

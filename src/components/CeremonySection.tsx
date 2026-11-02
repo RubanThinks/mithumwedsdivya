@@ -191,13 +191,13 @@ const CeremonySection: React.FC = () => {
               </span>
 
               <h3 className="font-cinzel text-2xl sm:text-3xl text-[#4A0E1F] font-black tracking-wide my-1 drop-shadow-sm">
-                12 November 2022
+                12 November 2026
               </h3>
             </div>
 
             <div className="relative z-10 pt-3 border-t border-[#C6A15B]/35 w-full mt-3">
               <p className="font-poppins text-sm text-[#5C4015] font-bold tracking-wider uppercase">
-                Saturday
+                Thursday
               </p>
             </div>
           </div>

@@ -283,7 +283,7 @@ const LocationSection = () => {
                 Wedding Ceremony
               </h4>
               <p className="font-playfair text-xl sm:text-2xl text-[#4A0E1F] font-black mb-1 drop-shadow-sm">
-                12 November 2022
+                12 November 2026
               </p>
               <div className="inline-flex items-center gap-1.5 text-xs text-[#2E1810] font-poppins font-bold bg-[#4A0E1F]/10 border border-[#C6A15B]/35 px-3 py-1 rounded-full mt-1">
                 <Clock className="w-3.5 h-3.5 text-[#8A6517]" />
@@ -331,7 +331,7 @@ const LocationSection = () => {
                 Dinner Celebration
               </h4>
               <p className="font-playfair text-xl sm:text-2xl text-[#4A0E1F] font-black mb-1 drop-shadow-sm">
-                12 November 2022
+                12 November 2026
               </p>
               <div className="inline-flex items-center gap-1.5 text-xs text-[#2E1810] font-poppins font-bold bg-[#4A0E1F]/10 border border-[#C6A15B]/35 px-3 py-1 rounded-full mt-1">
                 <Clock className="w-3.5 h-3.5 text-[#8A6517]" />

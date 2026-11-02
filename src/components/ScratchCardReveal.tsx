@@ -392,7 +392,7 @@ const ScratchCardReveal: React.FC<ScratchCardRevealProps> = ({ onRevealed }) => 
 
           {/* Prominent Revealed Wedding Date */}
           <h3 className="font-cinzel text-2xl sm:text-3xl md:text-4xl text-[#4A0E1F] font-black tracking-widest uppercase drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] my-1">
-            12 NOVEMBER 2022
+            12 NOVEMBER 2026
           </h3>
 
           {/* Auspicious Muhurtham Time */}
