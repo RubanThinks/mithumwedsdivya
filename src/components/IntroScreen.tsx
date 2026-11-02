@@ -103,13 +103,13 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ isVisible, onOpenInvitation }
 
           {/* CENTER SECTION: A Celebration of Love, Couple Names and Tagline (Middle-aligned) */}
           <div className="relative z-20 text-center max-w-xl mx-auto flex flex-col items-center justify-center my-auto px-2">
-            {/* Lead-in: A Celebration of Love - Positioned just above couple's names, away from top floral overhang */}
+            {/* Lead-in: A Celebration of Love - Distinct Deep Imperial Purple for high visibility while differentiating from Burgundy names */}
             <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2 sm:mb-4">
-              <span className="h-0.5 w-6 sm:w-12 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent md:via-gold" />
-              <p className="font-cinzel tracking-[0.25em] text-[#D4AF37] md:text-gold-light text-xs sm:text-sm uppercase font-black drop-shadow-[0_1px_3px_rgba(255,255,255,0.95)] md:drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
+              <span className="h-0.5 w-6 sm:w-12 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
+              <p className="font-cinzel tracking-[0.3em] text-[#2E0854] text-xs sm:text-sm uppercase font-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)]">
                 A Celebration of Love
               </p>
-              <span className="h-0.5 w-6 sm:w-12 bg-gradient-to-l from-transparent via-[#D4AF37] to-transparent md:via-gold" />
+              <span className="h-0.5 w-6 sm:w-12 bg-gradient-to-l from-transparent via-[#D4AF37] to-transparent" />
             </div>
 
             {/* Groom Name: Royal Velvet Maroon on Mobile, Ivory on Desktop */}
