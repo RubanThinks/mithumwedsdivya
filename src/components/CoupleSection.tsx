@@ -126,7 +126,7 @@ const CoupleSection = () => {
           </p>
 
           <h2 className="font-great-vibes text-5xl sm:text-6xl md:text-8xl text-[#4A0E2E] font-normal leading-tight drop-shadow-[0_2px_4px_rgba(255,255,255,0.85)]">
-            K. Midhun Sri
+            Midhun Sri
           </h2>
 
           <div className="my-1 md:my-2 flex items-center justify-center gap-4">
@@ -138,7 +138,7 @@ const CoupleSection = () => {
           </div>
 
           <h2 className="font-great-vibes text-5xl sm:text-6xl md:text-8xl text-[#4A0E2E] font-normal leading-tight drop-shadow-[0_2px_4px_rgba(255,255,255,0.85)]">
-            K. Divya
+            Divya
           </h2>
 
           <div className="ornamental-divider mx-auto my-4 max-w-xs">

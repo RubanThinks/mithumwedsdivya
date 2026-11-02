@@ -114,7 +114,7 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ isVisible, onOpenInvitation }
 
             {/* Groom Name: Royal Velvet Maroon on Mobile, Ivory on Desktop */}
             <h1 className="font-great-vibes text-[#4A0E2E] md:text-ivory text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none font-normal drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] md:drop-shadow-[0_4px_16px_rgba(50,10,30,0.95)]">
-              K. Midhun Sri
+              Midhun Sri
             </h1>
 
             {/* Ampersand */}
@@ -128,7 +128,7 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ isVisible, onOpenInvitation }
 
             {/* Bride Name: Royal Velvet Maroon on Mobile, Ivory on Desktop */}
             <h1 className="font-great-vibes text-[#4A0E2E] md:text-ivory text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none font-normal drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] md:drop-shadow-[0_4px_16px_rgba(50,10,30,0.95)]">
-              K. Divya
+              Divya
             </h1>
 
             {/* Ornamental divider */}

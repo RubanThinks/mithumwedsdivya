@@ -151,7 +151,7 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="font-great-vibes text-ivory text-6xl sm:text-7xl md:text-9xl leading-tight font-normal drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
         >
-          K. Midhun Sri
+          Midhun Sri
         </motion.h1>
 
         {/* Center: Dynamic Gold Filigree Outline & Sparkling Diamond Heart */}
@@ -166,7 +166,7 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 1.2, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="font-great-vibes text-ivory text-6xl sm:text-7xl md:text-9xl leading-tight font-normal drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
         >
-          K. Divya
+          Divya
         </motion.h1>
 
         {/* Gold Ornamental Divider Self-Drawing */}

@@ -159,7 +159,7 @@ const Footer: React.FC = () => {
             ref={groomRef}
             className="font-great-vibes text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#FFFDF9] font-normal leading-none drop-shadow-[0_4px_16px_rgba(40,10,25,0.95)] tracking-wide"
           >
-            K. Midhun Sri
+            Midhun Sri
           </h2>
 
           {/* Heart Symbol: Subtle Burgundy with Golden Glow */}
@@ -177,7 +177,7 @@ const Footer: React.FC = () => {
             ref={brideRef}
             className="font-great-vibes text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#FFFDF9] font-normal leading-none drop-shadow-[0_4px_16px_rgba(40,10,25,0.95)] tracking-wide"
           >
-            K. Divya
+            Divya
           </h2>
         </div>
 

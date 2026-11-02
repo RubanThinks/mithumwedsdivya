@@ -69,7 +69,7 @@ const MessageSection = () => {
           transition={{ duration: 1, delay: 0.6 }}
           className="font-great-vibes text-gold text-4xl sm:text-5xl md:text-6xl mb-4 drop-shadow-[0_2px_10px_rgba(212,175,55,0.5)]"
         >
-          K. Midhun Sri ❤️ K. Divya
+          Midhun Sri ❤️ Divya
         </motion.h3>
 
         {/* Tagline */}

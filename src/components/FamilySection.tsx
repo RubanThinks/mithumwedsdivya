@@ -216,7 +216,7 @@ const FamilySection = () => {
                       Groom
                     </span>
                     <h4 className="font-great-vibes text-3xl sm:text-4xl text-[#4A0E2E] font-normal drop-shadow-sm">
-                      K. Midhun Sri
+                      Midhun Sri
                     </h4>
                   </div>
 
@@ -325,7 +325,7 @@ const FamilySection = () => {
                       Bride
                     </span>
                     <h4 className="font-great-vibes text-3xl sm:text-4xl text-[#4A0E2E] font-normal drop-shadow-sm">
-                      K. Divya
+                      Divya
                     </h4>
                   </div>
 
