@@ -36,18 +36,17 @@ const CoupleSection = () => {
           );
         }
 
-        // Desktop photographs staggered entrance
+        {/* Desktop photograph entrance */}
         if (desktopGalleryRef.current) {
           const cards = desktopGalleryRef.current.querySelectorAll('.editorial-photo-card');
           gsap.fromTo(
             cards,
-            { opacity: 0, y: 45, scale: 0.98 },
+            { opacity: 0, y: 40, scale: 0.96 },
             {
               opacity: 1,
               y: 0,
               scale: 1,
               duration: 1.1,
-              stagger: 0.2,
               ease: 'power3.out',
               scrollTrigger: {
                 trigger: desktopGalleryRef.current,
@@ -58,18 +57,17 @@ const CoupleSection = () => {
           );
         }
 
-        // Mobile photographs staggered entrance
+        {/* Mobile photograph entrance */}
         if (mobileGalleryRef.current) {
           const mCards = mobileGalleryRef.current.querySelectorAll('.editorial-photo-mobile');
           gsap.fromTo(
             mCards,
-            { opacity: 0, y: 40, scale: 0.98 },
+            { opacity: 0, y: 35, scale: 0.96 },
             {
               opacity: 1,
               y: 0,
               scale: 1,
               duration: 1.0,
-              stagger: 0.2,
               ease: 'power3.out',
               scrollTrigger: {
                 trigger: mobileGalleryRef.current,
@@ -153,37 +151,14 @@ const CoupleSection = () => {
         </div>
 
         {/* ========================================================
-            3. DESKTOP PHOTOGRAPHS: 100% Crisp Original HD Photographs
-            Pure organic curves, natural soft shadows, zero colour filters, zero tint
+            3. DESKTOP PHOTOGRAPH: Grand Central Couple Portrait
             ======================================================== */}
         <div
           ref={desktopGalleryRef}
-          className="hidden md:grid grid-cols-12 gap-8 lg:gap-10 items-center max-w-6xl mx-auto"
+          className="hidden md:flex flex-col items-center justify-center max-w-xl mx-auto"
         >
-          {/* Photograph 1: Groom's Individual Portrait */}
-          <div className="editorial-photo-card col-span-4 flex flex-col items-center">
-            <div className="relative w-full aspect-[3/4] rounded-[28px] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.25)] transition-all duration-500 hover:-translate-y-1.5 group">
-              <img
-                src="/images/groom.jpg"
-                alt="K. Midhun Sri - The Groom"
-                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                loading="lazy"
-                style={{ opacity: 1, filter: 'none' }}
-              />
-            </div>
-            <div className="mt-4 text-center">
-              <span className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#801336] font-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
-                The Groom
-              </span>
-              <h3 className="font-cormorant text-2xl text-[#4A0E2E] font-bold drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
-                K. Midhun Sri
-              </h3>
-            </div>
-          </div>
-
-          {/* Photograph 3: Couple's Combined Photograph (Center, Prominent, 4/5 Aspect) */}
-          <div className="editorial-photo-card col-span-4 -translate-y-4 flex flex-col items-center z-10">
-            <div className="relative w-full aspect-[4/5] rounded-[34px] overflow-hidden shadow-[0_20px_45px_rgba(0,0,0,0.30)] transition-all duration-500 hover:-translate-y-2 group ring-2 ring-[#D4AF37]/50 hover:ring-[#D4AF37]">
+          <div className="editorial-photo-card flex flex-col items-center w-full max-w-md">
+            <div className="relative w-full aspect-[4/5] rounded-[34px] overflow-hidden shadow-[0_25px_60px_rgba(40,10,25,0.32),0_0_30px_rgba(212,175,55,0.22)] transition-all duration-500 hover:-translate-y-2 group ring-2 ring-[#D4AF37]/70 hover:ring-[#D4AF37]">
               <img
                 src="/images/couple.jpg"
                 alt="Midhun Sri & Divya Together"
@@ -192,45 +167,24 @@ const CoupleSection = () => {
                 style={{ opacity: 1, filter: 'none' }}
               />
             </div>
-            <div className="mt-4 text-center">
-              <span className="inline-block px-3.5 py-1 bg-gradient-to-r from-[#641E32] to-[#801336] text-[#F3E5AB] font-cinzel text-[10px] uppercase tracking-[0.25em] font-black rounded-full mb-1 shadow-md">
+            <div className="mt-5 text-center">
+              <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-[#641E32] to-[#801336] text-[#F3E5AB] font-cinzel text-[11px] uppercase tracking-[0.25em] font-black rounded-full mb-1.5 shadow-md">
                 Together Forever
               </span>
-              <h3 className="font-great-vibes text-4xl text-[#4A0E2E] drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+              <h3 className="font-great-vibes text-4xl sm:text-5xl text-[#4A0E2E] drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
                 Midhun &amp; Divya
-              </h3>
-            </div>
-          </div>
-
-          {/* Photograph 2: Bride's Individual Portrait */}
-          <div className="editorial-photo-card col-span-4 flex flex-col items-center">
-            <div className="relative w-full aspect-[3/4] rounded-[28px] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.25)] transition-all duration-500 hover:-translate-y-1.5 group">
-              <img
-                src="/images/bride.jpg"
-                alt="K. Divya - The Bride"
-                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                loading="lazy"
-                style={{ opacity: 1, filter: 'none' }}
-              />
-            </div>
-            <div className="mt-4 text-center">
-              <span className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#801336] font-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
-                The Bride
-              </span>
-              <h3 className="font-cormorant text-2xl text-[#4A0E2E] font-bold drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
-                K. Divya
               </h3>
             </div>
           </div>
         </div>
 
         {/* ========================================================
-            4. MOBILE PHOTOGRAPHS: Clean, High-Definition, Beautiful Spacing
+            4. MOBILE PHOTOGRAPH: Clean, High-Definition, Beautiful Spacing
             ======================================================== */}
-        <div ref={mobileGalleryRef} className="block md:hidden max-w-md mx-auto space-y-8">
-          {/* Couple Combined (Center Top) */}
+        <div ref={mobileGalleryRef} className="block md:hidden max-w-xs mx-auto">
+          {/* Couple Combined (Only) */}
           <div className="editorial-photo-mobile flex flex-col items-center">
-            <div className="relative w-full aspect-[4/5] rounded-[30px] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.28)] ring-2 ring-[#D4AF37]/50">
+            <div className="relative w-full aspect-[4/5] rounded-[28px] overflow-hidden shadow-[0_20px_45px_rgba(40,10,25,0.30),0_0_25px_rgba(212,175,55,0.2)] ring-2 ring-[#D4AF37]/70">
               <img
                 src="/images/couple.jpg"
                 alt="Midhun Sri & Divya Together"
@@ -239,58 +193,13 @@ const CoupleSection = () => {
                 style={{ opacity: 1, filter: 'none' }}
               />
             </div>
-            <div className="mt-3 text-center">
-              <span className="inline-block px-3 py-0.5 bg-gradient-to-r from-[#641E32] to-[#801336] text-[#F3E5AB] font-cinzel text-[10px] uppercase tracking-[0.2em] font-black rounded-full mb-1 shadow">
+            <div className="mt-4 text-center">
+              <span className="inline-block px-3.5 py-1 bg-gradient-to-r from-[#641E32] to-[#801336] text-[#F3E5AB] font-cinzel text-[10px] uppercase tracking-[0.2em] font-black rounded-full mb-1 shadow">
                 Together Forever
               </span>
-              <h3 className="font-great-vibes text-3xl text-[#4A0E2E] drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+              <h3 className="font-great-vibes text-3xl sm:text-4xl text-[#4A0E2E] drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
                 Midhun &amp; Divya
               </h3>
-            </div>
-          </div>
-
-          {/* Individual Portraits Below (Side by Side in 2 Columns) */}
-          <div className="grid grid-cols-2 gap-4">
-            {/* Groom */}
-            <div className="editorial-photo-mobile flex flex-col items-center">
-              <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_12px_28px_rgba(0,0,0,0.22)]">
-                <img
-                  src="/images/groom.jpg"
-                  alt="K. Midhun Sri - The Groom"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  style={{ opacity: 1, filter: 'none' }}
-                />
-              </div>
-              <div className="mt-2 text-center">
-                <span className="font-cinzel text-[9px] uppercase tracking-wider text-[#801336] font-black">
-                  The Groom
-                </span>
-                <h4 className="font-cormorant text-base text-[#4A0E2E] font-extrabold leading-tight">
-                  K. Midhun Sri
-                </h4>
-              </div>
-            </div>
-
-            {/* Bride */}
-            <div className="editorial-photo-mobile flex flex-col items-center">
-              <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_12px_28px_rgba(0,0,0,0.22)]">
-                <img
-                  src="/images/bride.jpg"
-                  alt="K. Divya - The Bride"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  style={{ opacity: 1, filter: 'none' }}
-                />
-              </div>
-              <div className="mt-2 text-center">
-                <span className="font-cinzel text-[9px] uppercase tracking-wider text-[#801336] font-black">
-                  The Bride
-                </span>
-                <h4 className="font-cormorant text-base text-[#4A0E2E] font-extrabold leading-tight">
-                  K. Divya
-                </h4>
-              </div>
             </div>
           </div>
         </div>
